@@ -1,8 +1,25 @@
+
 .shares{
     width: 90%;
-    height: 100%;
+    height: 260px;
     background-color: black;
     margin: 0 auto;
     margin-top: 50px;
     border-radius: 12px;
+}
+.shares-text{
+    color: white;
+    font-weight:lighter;
+    height: 150px;
+    
+}
+.f{
+    font-size: 40px;
+    
+}
+.t{
+    font-size: 32px;
+}
+.th{
+    font-size: 32px;
 }
