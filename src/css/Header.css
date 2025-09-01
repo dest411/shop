@@ -1,0 +1,22 @@
+.logo-h1{
+    display: inline-block;               /* важливо: градієнт прив’язується до тексту */
+    background: linear-gradient(90deg, rgba(89,0,111,1) 0%, rgba(38,13,193,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input input{
+    width: 750px;
+    height: 40px;
+    background-color: #DEDEDE;
+    border: none;
+    border-radius: 10px;
+}
