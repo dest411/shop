@@ -4,15 +4,21 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 40px;
-    font-family: "Space Mono", monospace;
+    font-family: "Orbitron", sans-serif;
     font-weight: 400;
+    letter-spacing: 4px;
 }
 .header{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
-.input{    position: relative;
+.input{    
+    position: relative;
 }
 
 .input-type{
@@ -33,12 +39,31 @@
     left: 20px;
     top: 13px;
 }
-.navUser{
+.navUser {
     display: flex;
-    align-items: center;
     gap: 30px;
 }
+
 .navUser img{
-    width: 23px;
-    height: 23px;
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+}
+.liUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.liUser h3 {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 70%;
+}
+.vertical-hr{
+    width: 100%;
+    height: 1px;
+    background-color: #C1C1C1;
+    border: none;
 }
