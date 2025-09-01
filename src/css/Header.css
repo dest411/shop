@@ -12,11 +12,33 @@
     justify-content: space-between;
     align-items: center;
 }
+.input{    position: relative;
+}
 
-.input input{
+.input-type{
     width: 750px;
     height: 40px;
     background-color: #DEDEDE;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
+    padding-left: 50px;
+    font-size: 16px;
+    color: black;
+}
+.input img{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    z-index: 100;
+    left: 20px;
+    top: 13px;
+}
+.navUser{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.navUser img{
+    width: 23px;
+    height: 23px;
 }
