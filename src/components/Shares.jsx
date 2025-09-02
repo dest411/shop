@@ -7,7 +7,7 @@ const Shares = () => {
     <div className='shares' >
       <div className='shares-text' >
         <p className='f' >Розумна колонка</p>
-        <p className='t' >Знижка 30%</p>
+        <p className='t' >ЗНИЖКА 30%</p>
         <p className='th' >при купівлі другого товара</p>
       </div>
       <div>
