@@ -19,7 +19,7 @@
 }
 .catalog-list{
     display: flex;
-    
+    position: relative;
     justify-content: space-between;
     align-items: center;
 }
@@ -33,4 +33,16 @@
 .item p {
     font-size: 20px;
     font-weight: 300;
+}
+.backr {
+    width: 20px;                /* квадрат */
+    aspect-ratio: 1 / 1;        /* забезпечує круг */
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 45%;
+    transform: rotate(180deg);
+    cursor: pointer;
 }
