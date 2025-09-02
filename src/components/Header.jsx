@@ -5,7 +5,7 @@ import catalog from '../png/icon catalog.svg'
 import basket from '../png/icon basket.svg'
 import profile from '../png/icon profile.svg'
 
-const Header = () => {
+const Header = (cartCount) => {
   return (
     <div>
         <div className='header' >
@@ -22,7 +22,10 @@ const Header = () => {
                     <h3>Каталог</h3>
                 </div>
                 <div className='liUser' >
-                    <img src={basket} alt="" />
+                    {cartCount > 0 && (
+                        <span className='cart-count' >{cartCount}</span>
+                    )}
+                    <img className='basket' src={basket} alt="" />
                     <h3>Кошик</h3>
                 </div>
                 <div className='liUser' >

@@ -66,3 +66,13 @@
     background-color: #C1C1C1;
     border: none;
 }
+.basket{
+    position: relative;
+}
+.cart-count{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    color: white;
+    z-index: 100;
+}

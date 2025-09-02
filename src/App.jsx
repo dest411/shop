@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Shares from './components/Shares';
 import './App.css'
@@ -6,12 +6,20 @@ import Catalog from './components/Catalog';
 import Discounts from './components/Discounts';
 
 function App() {
+
+  const[cartCount, setCartCount] = useState(0);
+  const addBasket = () => {
+    setCartCount(prev => prev +1);
+    console.log(cartCount);
+    
+};
+
   return (
     <div className="App">
-        <Header/>
+        <Header cartCount={cartCount} />
         <Shares/>
         <Catalog/>
-        <Discounts/>
+        <Discounts addBasket={addBasket} />
     </div>
   );
 }

@@ -56,7 +56,10 @@ const phones = [
   },
 ];
 
-const Discounts = () => {
+
+
+
+const Discounts = ({addBasket}) => {
   return (
     <div className='discounts' >
         <div className='h6' >
@@ -88,7 +91,7 @@ const Discounts = () => {
                           <img src={heart} alt="heart" />
                         </div>
                     </div>
-                    <button className='button' >В корзину</button>
+                    <button onClick={addBasket} className='button' >В корзину</button>
                 </div>
             ))}
         </div>
