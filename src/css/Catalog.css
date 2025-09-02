@@ -1,0 +1,38 @@
+.catalog{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.catalog h6{
+    font-size: 32px;
+    font-weight: 400;
+}
+.backg{
+    width: 200px;
+    height: 210px;
+    background-color: #BCC5FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.catalog-list{
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+.item p {
+    font-size: 20px;
+    font-weight: 300;
+}
+.backg img{
+    background-color:#BCC5FF ;
+}
