@@ -13,47 +13,49 @@ import image6 from '../png/image 6.png';
 const Catalog = () => {
   return (
     <div className='catalog' >
-        <h6>Каталог</h6>
-        
-            <div className='catalog-list' >
-                <div className='item' >
-                    <div className='backg' >
-                        <img  src={image1} alt="" />
-                    </div>
-                    <p>Смартфони</p>
+        <div className='text' >
+          <h6>Каталог</h6>  
+        </div>
+        <div className='catalog-list' >
+            
+            <div className='item' >
+                <div className='backg' >
+                    <img  src={image1} alt="" />
                 </div>
-                <div className='item' >
-                    <div className='backg' >
-                        <img src={image2} alt="image5" />
-                    </div>
-                    <p>Ноутбуки</p>
-                </div>
-                <div className='item' >
-                    <div className='backg' >
-                        <img src={image3} alt="image6" />
-                    </div>
-                    <p>Комп'ютери</p>
-                </div>
-                <div className='item' >
-                    <div className='backg' >
-                        <img src={image4} alt="image6" />
-                    </div>
-                    <p>Телевізори</p>
-                </div>
-                <div className='item' >
-                    <div className='backg' >
-                        <img src={image5} alt="image6" />
-                    </div>
-                    <p>Планшети</p>
-                </div>
-                <div className='item' >
-                    <div className='backg' >
-                        <img src={image6} alt="image6" />
-                    </div>
-                    <p>Колонки</p>
-                </div>
-                <img src={backblack} className='backr'  alt="" />
+                <p>Смартфони</p>
             </div>
+            <div className='item' >
+                <div className='backg' >
+                    <img src={image2} alt="image5" />
+                </div>
+                <p>Ноутбуки</p>
+            </div>
+            <div className='item' >
+                <div className='backg' >
+                    <img src={image3} alt="image6" />
+                </div>
+                <p>Комп'ютери</p>
+            </div>
+            <div className='item' >
+                <div className='backg' >
+                    <img src={image4} alt="image6" />
+                </div>
+                <p>Телевізори</p>
+            </div>
+            <div className='item' >
+                <div className='backg' >
+                    <img src={image5} alt="image6" />
+                </div>
+                <p>Планшети</p>
+            </div>
+            <div className='item' >
+                <div className='backg' >
+                    <img src={image6} alt="image6" />
+                </div>
+                <p>Колонки</p>
+            </div>
+            <img src={backblack} className='backr'  alt="" />
+        </div>
             
         
     </div>
