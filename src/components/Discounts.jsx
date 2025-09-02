@@ -71,7 +71,9 @@ const Discounts = () => {
                         <img src={phone.image} alt="" />
                         <span className='discount' >{phone.discount}</span>
                     </div>
-                    <h1 className='h1' >{phone.title}</h1>
+                    <div className='textt' >
+                        <h1>{phone.title}</h1>
+                    </div>
                     <div className='phone-price' >
                         <p>{phone.price}</p>
                         <span>{phone.oldPrice}</span>

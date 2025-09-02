@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    padding: 20px 0;
 }
 .input{    
     position: relative;
@@ -47,14 +47,13 @@
 .navUser img{
     width: 20px;
     height: 20px;
-    margin-top: 15px;
 }
 .liUser{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    gap: 5px;
 }
 .liUser h3 {
     font-size: 14px;

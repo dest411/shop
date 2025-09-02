@@ -4,6 +4,7 @@
     height: auto;
     margin: 0 auto;
     margin-top: 100px;
+    
 
 }
 .h6 h6{
@@ -29,6 +30,7 @@
 .phone-image{
     display: flex;
     position: relative;
+    background-color: antiquewhite;
     justify-content: center;
     width: 160px;
     height: 200px;
@@ -47,22 +49,34 @@
     font-size: 18px;
     right: 0;
 }
-.h1{
+
+.textt{
+    display: flex;
+    justify-content: center;
+}
+.textt h1{
+    display: flex;
     font-size: 20px;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 .phone-card{
+    background-color: blueviolet;
     width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 .phone-price{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+
 }
 
 .phone-price p{

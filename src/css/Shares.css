@@ -8,6 +8,7 @@
     border-radius: 12px;
     display: flex;
     position: relative;
+    margin-bottom: 50px;
 }
 .shares-text{
     display: flex;
