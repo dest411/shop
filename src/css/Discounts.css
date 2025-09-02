@@ -31,7 +31,7 @@
     justify-content: center;
     width: 160px;
     height: 200px;
-    
+    margin-top: 20px;
 }
 .phone-image span{
     position: absolute;
@@ -66,7 +66,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    transition: all 0.1s ease-in;
+    border-radius: 8px;
+}
+.phone-card:hover{
+    box-shadow: -2px -1px 50px -40px rgba(0,0,0,0.75);
 }
 .phone-price{
     display: flex;
@@ -106,6 +110,7 @@
 .heart img{
     width: 18px;
     height: 15px;
+    cursor: pointer;
 }
 
 /* IN STOCK */
@@ -118,4 +123,15 @@
     font-size: 14px;
     font-weight: 300;
     color: red;
+}
+.button{
+    margin-top: 20px;
+    width: 160px;
+    height: 45px;
+    border: none;
+    background-color: #091D9E ;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
