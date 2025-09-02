@@ -66,18 +66,18 @@ const Discounts = () => {
         <hr />
         <div className='phones-list' >
             {phones.map((phone) =>(
-                <div key={phones.id} className='phone-card' >
+                <div key={phone.id} className='phone-card' >
                     <div className='phone-image' >
-                        <img src={phones.image} alt="" />
-                        <span className='discount' >{phones.discount}</span>
+                        <img src={phone.image} alt="" />
+                        <span className='discount' >{phone.discount}</span>
                     </div>
-                    <h1>{phones.title}</h1>
+                    <h1>{phone.title}</h1>
                     <div className='phone-price' >
-                        <p>{phones.price}</p>
-                        <span>{phones.oldPrice}</span>
+                        <p>{phone.price}</p>
+                        <span>{phone.oldPrice}</span>
                     </div>
                     <div className='instock' >
-                        {phones.inStock? (
+                        {phone.inStock? (
                             <p className='phone-instock-true' >В наявності</p>
                         ) : (
                             <p className='phone-instock-false' >Нема в наявності</p>
