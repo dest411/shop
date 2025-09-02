@@ -16,14 +16,20 @@
     height: 2px;
     background-color: #BCC5FF; 
 }
+.hr span {
+    display: block;      
+    height: 2px;
+    background-color: #BCC5FF; 
+    margin-bottom: 100px;
+}
 .phones-list{
     width: 95%;
     margin-top: 40px;
     display: flex;
     margin: 0 auto;
     margin-top: 20px;
-    margin-bottom: 100px;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 .phone-image{
     display: flex;

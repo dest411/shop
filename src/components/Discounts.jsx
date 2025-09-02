@@ -92,6 +92,9 @@ const Discounts = () => {
                 </div>
             ))}
         </div>
+        <div className='hr' >
+          <span></span>
+        </div>
     </div>
   )
 }
