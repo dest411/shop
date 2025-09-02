@@ -15,6 +15,8 @@ const Shares = () => {
         <img src={column} alt="" />
       </div>
       <img className='backleft' src={back} alt="" />
+      <img className='backright' src={back} alt="" />
+
     </div>
   )
 }

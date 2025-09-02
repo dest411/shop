@@ -7,6 +7,7 @@
     margin-top: 50px;
     border-radius: 12px;
     display: flex;
+    position: relative;
 }
 .shares-text{
     display: flex;
@@ -34,4 +35,27 @@
 .th{
     font-size: 32px;
 }
-.backleft
+.backleft {
+    width: 20px;                /* квадрат */
+    aspect-ratio: 1 / 1;        /* забезпечує круг */
+    border: 2px solid silver;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    left: 20px;
+    top: 45%;
+    cursor: pointer;
+}
+
+.backright {
+    width: 20px;                /* квадрат */
+    aspect-ratio: 1 / 1;        /* забезпечує круг */
+    border: 2px solid silver;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 45%;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
