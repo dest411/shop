@@ -52,7 +52,7 @@ const phones = [
     oldPrice: "79 999 ₴",
     discount: "-4%",
     image: iphone14,
-    inStock: true,
+    inStock: false,
   },
 ];
 
@@ -82,7 +82,7 @@ const Discounts = () => {
                         {phone.inStock? (
                             <h3 className='phone-instock-true' >В наявності</h3>
                         ) : (
-                            <h3 className='phone-instock-false' >Нема в наявності</h3>
+                            <h3 className='phone-instock-false' >Закінчився</h3>
                         )}
                         <div className='heart' >
                           <img src={heart} alt="heart" />
