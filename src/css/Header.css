@@ -38,6 +38,7 @@
     z-index: 100;
     left: 20px;
     top: 13px;
+    cursor: pointer;
 }
 .navUser {
     display: flex;
@@ -47,6 +48,8 @@
 .navUser img{
     width: 20px;
     height: 20px;
+    cursor: pointer;
+
 }
 .liUser{
     display: flex;
@@ -54,6 +57,7 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
+    position: relative;
 }
 .liUser h3 {
     font-size: 14px;
@@ -66,13 +70,20 @@
     background-color: #C1C1C1;
     border: none;
 }
-.basket{
-    position: relative;
-}
+
 .cart-count{
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 22px;
+    height: 22px;
     color: white;
     z-index: 100;
+    background-color: RED;
+    border: 1px solid hsl(0, 100%, 49%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    right: -5px;
+    top: -15px;
 }

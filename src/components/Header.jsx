@@ -5,7 +5,7 @@ import catalog from '../png/icon catalog.svg'
 import basket from '../png/icon basket.svg'
 import profile from '../png/icon profile.svg'
 
-const Header = (cartCount) => {
+const Header = ({cartCount}) => {
   return (
     <div>
         <div className='header' >
