@@ -13,8 +13,9 @@
     height: 210px;
     background-color: #BCC5FF;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    border-radius: 12px;
 }
 .catalog-list{
     display: flex;
@@ -32,7 +33,4 @@
 .item p {
     font-size: 20px;
     font-weight: 300;
-}
-.backg img{
-    background-color:#BCC5FF ;
 }

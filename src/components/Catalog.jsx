@@ -10,7 +10,7 @@ const Catalog = () => {
             <div className='catalog-list' >
                 <div className='item' >
                     <div className='backg' >
-                        <img src={image1} alt="" />
+                        <img  src={image1} alt="" />
                     </div>
                     <p>Смартфони</p>
                 </div>
