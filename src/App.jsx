@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Shares from './components/Shares';
 import './App.css'
 import Catalog from './components/Catalog';
+import Discounts from './components/Discounts';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Header/>
         <Shares/>
         <Catalog/>
+        <Discounts/>
     </div>
   );
 }
