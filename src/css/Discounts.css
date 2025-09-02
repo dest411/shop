@@ -29,7 +29,6 @@
 .phone-image{
     display: flex;
     position: relative;
-    background-color: antiquewhite;
     justify-content: center;
     width: 160px;
     height: 200px;
@@ -53,7 +52,6 @@
     text-align: center;
 }
 .phone-card{
-    background-color: blueviolet;
     width: 200px;
     display: flex;
     flex-direction: column;
@@ -62,8 +60,18 @@
 }
 .phone-price{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .phone-price p{
     font-size: 20px;
+    font-weight: bold;
+}
+.phone-price span{
+    padding: 5px 0 0 0;
+    font-size: 12px;
+    text-decoration: line-through;
+    font-weight: 300;
 }
