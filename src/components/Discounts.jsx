@@ -59,11 +59,11 @@ const phones = [
 const Discounts = () => {
   return (
     <div className='discounts' >
-        <div>
-            <p>Знижка</p>
+        <div className='h6' >
+            <h6 >Знижки</h6>
+            <span></span>
         </div>
-        
-        <hr />
+    
         <div className='phones-list' >
             {phones.map((phone) =>(
                 <div key={phone.id} className='phone-card' >
