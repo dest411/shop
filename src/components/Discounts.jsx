@@ -80,11 +80,13 @@ const Discounts = () => {
                     </div>
                     <div className='instock' >
                         {phone.inStock? (
-                            <p className='phone-instock-true' >В наявності</p>
+                            <h3 className='phone-instock-true' >В наявності</h3>
                         ) : (
-                            <p className='phone-instock-false' >Нема в наявності</p>
+                            <h3 className='phone-instock-false' >Нема в наявності</h3>
                         )}
-                        <img src={heart} alt="heart" />
+                        <div className='heart' >
+                          <img src={heart} alt="heart" />
+                        </div>
                     </div>
                     <button className='button' >В корзину</button>
                 </div>

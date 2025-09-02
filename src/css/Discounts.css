@@ -28,7 +28,6 @@
 .phone-image{
     display: flex;
     position: relative;
-    background-color: antiquewhite;
     justify-content: center;
     width: 160px;
     height: 200px;
@@ -50,8 +49,6 @@
 }
 
 .textt{
-    display: flex;
-    justify-content: center;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -64,7 +61,6 @@
     text-align: center;
 }
 .phone-card{
-    background-color: blueviolet;
     width: 200px;
     display: flex;
     flex-direction: column;
@@ -91,4 +87,25 @@
     font-weight: 300;
 }
 
-.instock
+.instock{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.heart{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: -2px -1px 99px 1px rgba(0,0,0,0.75);
+
+}
+.heart img{
+    width: 18px;
+    height: 15px;
+}
+
+/* IN STOCK */
