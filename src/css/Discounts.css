@@ -31,16 +31,39 @@
     position: relative;
     background-color: antiquewhite;
     justify-content: center;
-    width: 220px;
+    width: 160px;
     height: 200px;
 }
 .phone-image span{
     position: absolute;
+    background-color: #EBBA1A;
+    color: black;
+    width: 65px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    right: 0;
 }
 .h1{
     font-size: 20px;
+    text-align: center;
 }
 .phone-card{
     background-color: blueviolet;
-    width: 220px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.phone-price{
+    display: flex;
+}
+
+.phone-price p{
+    font-size: 20px;
 }
