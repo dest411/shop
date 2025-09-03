@@ -59,7 +59,7 @@ const phones = [
 
 
 
-const Discounts = ({addBasket}) => {
+const Discounts = ({addBasket, handleClick, inCart, removeFromCart}) => {
   return (
     <div className='discounts' >
         <div className='h6' >
@@ -88,10 +88,29 @@ const Discounts = ({addBasket}) => {
                             <h3 className='phone-instock-false' >Закінчився</h3>
                         )}
                         <div className='heart' >
-                          <img src={heart} alt="heart" />
+                          <img src={heart} alt="heart" /> {/* HEART ONCLICK  */}
+                          
                         </div>
                     </div>
-                    <button onClick={addBasket} className='button' >В корзину</button>
+                    {phone.inStock ? (
+                      inCart[phone.id] ? (
+                          <button onClick={() => {
+                            
+                            handleClick(phone.id);
+                            removeFromCart(phone.id);
+                          } }  className='buttonremove' >Видалити з корзини</button>
+                                    
+                      ):(
+                          <button onClick={() => {
+                          addBasket(phone.id);
+                          handleClick(phone.id);
+                        }} className='button' >В корзину</button>
+                      )
+                      
+                    ): (
+                      <button className='buttonfalse' >Сповістити про наявність</button>
+                    )}
+                    
                 </div>
             ))}
         </div>

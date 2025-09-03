@@ -7,7 +7,20 @@ import Discounts from './components/Discounts';
 
 function App() {
 
-  const[cartCount, setCartCount] = useState(0);
+  const [cartCount, setCartCount] = useState(0);
+  const [inCart, setInCart] = useState({});
+
+  const handleClick = (id) => {
+    setInCart(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  
+  };
+  const removeFromCart = () =>{
+    setCartCount(num => num - 1)
+  }
+
   const addBasket = () => {
     setCartCount(prev => prev +1);
     console.log(cartCount);
@@ -19,7 +32,7 @@ function App() {
         <Header cartCount={cartCount} />
         <Shares/>
         <Catalog/>
-        <Discounts addBasket={addBasket} />
+        <Discounts addBasket={addBasket} handleClick={handleClick} inCart={inCart} removeFromCart={removeFromCart}/>
     </div>
   );
 }
