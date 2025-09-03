@@ -7,7 +7,7 @@ import profile from '../png/icon profile.svg'
 
 const Header = ({cartCount}) => {
   return (
-    <div>
+    <div className='header-fixed' >
         <div className='header' >
             <div className='logo' >
                 <h1 className='logo-h1' >GLANCE</h1>
