@@ -111,12 +111,12 @@
     align-items: center;
     border-radius: 8px;
     box-shadow: -2px -1px 99px -5px rgba(0,0,0,0.75);
-
 }
 .heart img{
     width: 18px;
     height: 15px;
     cursor: pointer;
+    transition: all 1s ease-in;
 }
 
 /* IN STOCK */
