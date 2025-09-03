@@ -9,6 +9,15 @@ function App() {
 
   const [cartCount, setCartCount] = useState(0);
   const [inCart, setInCart] = useState({});
+  const [heart, setHeart] = useState({})
+
+  const toggleHeart = (id) => {
+  setHeart(prev => ({
+    ...prev,
+    [id]: !prev[id]
+  }));
+  };  
+
 
   const handleClick = (id) => {
     setInCart(prev => ({
@@ -24,6 +33,7 @@ function App() {
   const addBasket = () => {
     setCartCount(prev => prev +1);
     console.log(cartCount);
+  
     
 };
 
@@ -32,7 +42,14 @@ function App() {
         <Header cartCount={cartCount} />
         <Shares/>
         <Catalog/>
-        <Discounts addBasket={addBasket} handleClick={handleClick} inCart={inCart} removeFromCart={removeFromCart}/>
+        <Discounts 
+        addBasket={addBasket} 
+        handleClick={handleClick} 
+        inCart={inCart} 
+        removeFromCart={removeFromCart}
+        toggleHeart={toggleHeart}
+        heart={heart}
+        />
     </div>
   );
 }

@@ -5,7 +5,8 @@ import iphone12 from '../png/phones/iphone_12_64gb.png';
 import iphone14 from '../png/phones/iphone_14_128gb.png';
 import iphone14pro from '../png/phones/iphone_14_pro_128gb.png';
 import xiaomiredmi128gb from '../png/phones/xiaomi_redmi_128gb.png';
-import heart from '../png/Vector.svg';
+import heartt from '../png/Vector.svg';
+import redHeart from  '../png/redHeart.svg';
 
 
 const phones = [
@@ -59,7 +60,7 @@ const phones = [
 
 
 
-const Discounts = ({addBasket, handleClick, inCart, removeFromCart}) => {
+const Discounts = ({addBasket, handleClick, inCart, removeFromCart, toggleHeart, heart}) => {
   return (
     <div className='discounts' >
         <div className='h6' >
@@ -88,8 +89,12 @@ const Discounts = ({addBasket, handleClick, inCart, removeFromCart}) => {
                             <h3 className='phone-instock-false' >Закінчився</h3>
                         )}
                         <div className='heart' >
-                          <img src={heart} alt="heart" /> {/* HEART ONCLICK  */}
-                          
+                          <img
+                            onClick={() => toggleHeart(phone.id)}
+                            src={heart[phone.id] ? redHeart : heartt} // вибираємо картинку по стану
+                            alt="heart"
+                          />
+
                         </div>
                     </div>
                     {phone.inStock ? (
