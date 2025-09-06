@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/Header.css'
+import { Link } from "react-router-dom";
 import search from '../png/icon search.svg'
 import catalog from '../png/icon catalog.svg'
 import basket from '../png/icon basket.svg'
@@ -9,29 +10,40 @@ const Header = ({cartCount}) => {
   return (
     <div className='header-fixed' >
         <div className='header' >
-            <div className='logo' >
-                <h1 className='logo-h1' >GLANCE</h1>
-            </div>
+            <Link to = "/App">
+                <div className='logo' >
+                    <h1 className='logo-h1' >GLANCE</h1>
+                </div>
+            </Link>
+            
             <div className='input' >
                 <img src={search} alt="" />
                 <input className='input-type' type="text" placeholder='Пошук' />
             </div>
             <div className='navUser' >
-                <div className='liUser' >
-                    <img src={catalog} alt="" />
-                    <h3>Каталог</h3>
-                </div>
-                <div className='liUser' >
-                    {cartCount > 0 && (
-                        <span className='cart-count' >{cartCount}</span>
-                    )}
-                    <img className='basket' src={basket} alt="" />
-                    <h3>Кошик</h3>
-                </div>
-                <div className='liUser' >
-                    <img src={profile} alt="" />
-                    <h3>Профіль</h3>
-                </div>
+                <Link to="/CatalogMain" style={{ textDecoration: 'none', color: 'black' }} >
+                    <div className='liUser' >
+                        <img src={catalog} alt="" />
+                        <h3>Каталог</h3>
+                    </div>
+                </Link>
+                <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
+                    <div className='liUser' >
+                        {cartCount > 0 && (
+                            <span className='cart-count' >{cartCount}</span>
+                        )}
+                        <img className='basket' src={basket} alt="" />
+                        <h3>Кошик</h3>
+                    </div>
+                </Link> 
+                
+                <Link to="/" style={{ textDecoration: 'none', color: 'black' }} >
+                    <div className='liUser' >
+                        <img src={profile} alt="" />
+                        <h3>Профіль</h3>
+                    </div>
+                </Link>
+                
             </div>
         </div>
         <hr className='vertical-hr'  />
