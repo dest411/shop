@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import '../cssInfo/Info.css'
 import backBlack from '../png/backblack.svg'
@@ -6,8 +6,15 @@ import arrows1 from '../png/arrows/Vector 4.svg'
 import arrows2 from '../png/arrows/Vector 5.svg'
 import black4squares from '../png/sort/black/black4square.svg'
 import white3lines from '../png/sort/white/white3lines.svg'
+import white4squares from '../png/sort/white/white4square.svg'
+import black3lines from '../png/sort/black/black3lines.svg'
+
+
 
 const Info = () => {
+
+    const [viewfilter, setViewFilter] = useState(true);
+
   return (
     <div className='info'  >
         <div className='linkTo' >
@@ -30,8 +37,18 @@ const Info = () => {
                 <p>За популярністю</p> 
             </div>
             <div className='view' >
-                <img src={black4squares} alt="" />
-                <img src={white3lines} alt="" />
+                {viewfilter ? (
+                    <>
+                        <img src={black4squares} alt="" />
+                        <img onClick={() => setViewFilter(false) }  src={white3lines} alt="" />
+                    </>
+                ):(
+                    <>
+                        <img onClick={() => setViewFilter(true)} src={white4squares} alt="" />
+                        <img src={black3lines} alt="" />
+                    </>
+                )}
+
             </div>
             
         </div>
