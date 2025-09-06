@@ -18,8 +18,8 @@ const Info = () => {
                 <h6>Смартфони</h6>
             </Link>
         </div>
-        <div className="sort">
-            <div>
+        <div>
+            <div className='sort' >
                 <div className='sortImg' >
                     <img src={arrows2} alt="" />
                     <img src={arrows1} alt="" />  
