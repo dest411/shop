@@ -15,6 +15,8 @@ const Info = () => {
 
     const [viewfilter, setViewFilter] = useState(true);
 
+    const [sortOpen, setSortOpen] = useState(false);
+
   return (
     <div className='info'  >
         <div className='linkTo' >
@@ -28,18 +30,22 @@ const Info = () => {
             </Link>
         </div>
         <div className='filter' >
-            <div className='sort' >
+            <div onClick={() => setSortOpen(! sortOpen) } className='sort' >
                 <div className='sortImg' >
                     <img src={arrows2} alt="" />
                     <img src={arrows1} alt="" />  
                 </div>
                 
-                <p>За популярністю</p> 
-                <div className='sorttext' >
+                <p>За популярністю</p>
+
+                {sortOpen ? (
+                  <div className='sorttext' >
                     <p>За популярністю</p>
                     <p>Від дешевих до дорогих</p>
                     <p>Від дорогих до дешевих</p>
-                </div>
+                </div>  
+                ):null}
+                
             </div>
             <div className='view' >
                 {viewfilter ? (
