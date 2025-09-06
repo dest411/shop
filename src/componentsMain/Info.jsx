@@ -4,6 +4,8 @@ import '../cssInfo/Info.css'
 import backBlack from '../png/backblack.svg'
 import arrows1 from '../png/arrows/Vector 4.svg'
 import arrows2 from '../png/arrows/Vector 5.svg'
+import black4squares from '../png/sort/black/black4square.svg'
+import white3lines from '../png/sort/white/white3lines.svg'
 
 const Info = () => {
   return (
@@ -18,7 +20,7 @@ const Info = () => {
                 <h6>Смартфони</h6>
             </Link>
         </div>
-        <div>
+        <div className='filter' >
             <div className='sort' >
                 <div className='sortImg' >
                     <img src={arrows2} alt="" />
@@ -27,7 +29,10 @@ const Info = () => {
                 
                 <p>За популярністю</p> 
             </div>
-            <div></div>
+            <div className='view' >
+                <img src={black4squares} alt="" />
+                <img src={white3lines} alt="" />
+            </div>
             
         </div>
     </div>
