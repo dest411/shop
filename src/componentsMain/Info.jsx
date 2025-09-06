@@ -35,6 +35,11 @@ const Info = () => {
                 </div>
                 
                 <p>За популярністю</p> 
+                <div className='sorttext' >
+                    <p>За популярністю</p>
+                    <p>Від дешевих до дорогих</p>
+                    <p>Від дорогих до дешевих</p>
+                </div>
             </div>
             <div className='view' >
                 {viewfilter ? (
