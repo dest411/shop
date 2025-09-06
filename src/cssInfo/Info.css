@@ -28,3 +28,17 @@
     font-weight: 400;
     font-size: 32px;
 }
+.sort{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: aquamarine;
+    width: 160px;
+    height: auto;
+    font-size: 16px;
+}
+.sortImg{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
