@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './components/Header'
 import Info from './componentsMain/Info'
+import MainCatalog from './componentsMain/MainCatalog.jsx'
 
 
 const CatalogMain = () => {
@@ -8,6 +9,7 @@ const CatalogMain = () => {
     <div>
         <Header />
         <Info/>
+        <MainCatalog/>
     </div>
   )
 }

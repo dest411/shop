@@ -10,7 +10,7 @@ const Header = ({cartCount}) => {
   return (
     <div className='header-fixed' >
         <div className='header' >
-            <Link to = "/App">
+            <Link to = "/">
                 <div className='logo' >
                     <h1 className='logo-h1' >GLANCE</h1>
                 </div>

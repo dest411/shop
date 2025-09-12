@@ -1,0 +1,23 @@
+.MainCatalog{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    
+}
+aside{
+    width: 300px;
+    
+    height: 800px;
+    float: left;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+.asideinput{
+    display: flex;
+    align-items: center;
+}
+.asideinput input{
+    width: 80px;
+    height: 30px;
+}

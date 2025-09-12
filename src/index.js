@@ -9,7 +9,7 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "/App",
+    path: "/",
     element: <App />,
   },
   {
