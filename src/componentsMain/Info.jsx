@@ -39,7 +39,7 @@ const Info = () => {
                 <p>За популярністю</p>
 
                 {sortOpen ? (
-                  <div className='sorttext' >
+                  <div className='sorttext mt-56' >
                     <p>За популярністю</p>
                     <p>Від дешевих до дорогих</p>
                     <p>Від дорогих до дешевих</p>

@@ -4,8 +4,8 @@ import '../cssInfo/MainCatalog.css'
 const Aside = () => {
   return (
     <div>
-        <aside className='rounded-sm' >
-            <div>
+        <aside className='rounded-sm flex flex-col gap-8' >
+          <div>
                 <p>Ціна, грн</p>
                 <div className='asideinput flex justify-between items-center mt-3' >
                     <input type="text" placeholder='від'  className='
@@ -16,6 +16,17 @@ const Aside = () => {
                       border px-2 py-5 bg-lightBlue text-black 
                       rounded-lg placeholder-black/70 focus:border-blue-400 outline-0 transition-colors duration-300'/>
                 </div>
+            </div>
+            <div>
+              <p>Вбудована пам'ять</p>
+              <div>
+                <label><input type="checkbox" name="memory" value="512GB" /> 512GB</label>
+                <label><input type="checkbox" name="memory" value="256GB" /> 256GB</label>
+                <label><input type="checkbox" name="memory" value="128GB" /> 128GB</label>
+                <label><input type="checkbox" name="memory" value="64GB" /> 64GB</label>
+                <label><input type="checkbox" name="memory" value="32GB" /> 32GB</label>
+              </div>
+
             </div>
       </aside>
     </div>
