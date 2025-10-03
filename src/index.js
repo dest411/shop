@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import CatalogMain from './CatalogMain';
+import "./App.css"
 import {
   createBrowserRouter,
   RouterProvider,

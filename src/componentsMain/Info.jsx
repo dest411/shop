@@ -20,7 +20,7 @@ const Info = () => {
   return (
     <div className='info'  >
         <div className='linkTo' >
-            <Link to="/App" style={{ textDecoration: 'none', color: 'black', opacity: "60%" }} >Головна / </Link>
+            <Link to="/" style={{ textDecoration: 'none', color: 'black', opacity: "60%" }} >Головна / </Link>
             <p>Смартфони</p>
         </div>
         <div className='titleInfo' >
