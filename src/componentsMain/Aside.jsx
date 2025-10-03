@@ -7,7 +7,7 @@ const Aside = () => {
         <aside>
             <div>
                 <p>Ціна, грн</p>
-                <div className='asideinput' >
+                <div className='asideinput ' >
                     <input type="text" />
                     <input type="text" />
                 </div>
