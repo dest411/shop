@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../cssInfo/MainCatalog.css'
 
 const Aside = () => {
+  const [selectredMemory, setSelectredMemory] = useState ([]);
+  const target = (event) => {
+    console.log(event.target.value);
+    
+  }
   return (
     <div>
         <aside className='rounded-sm flex flex-col gap-8 h-auto' >
@@ -20,7 +25,7 @@ const Aside = () => {
             <div className='flex flex-col gap-2'>
               <p>Вбудована пам'ять</p>
               <div className='flex flex-col gap-1' >
-                <label><input type="checkbox" name="memory" value="512GB" className='' /> 512GB</label>
+                <label><input onChange={target} type="checkbox" name="memory" value="512GB" className='' /> 512GB</label>
                 <label><input type="checkbox" name="memory" value="256GB" /> 256GB</label>
                 <label><input type="checkbox" name="memory" value="128GB" /> 128GB</label>
                 <label><input type="checkbox" name="memory" value="64GB" /> 64GB</label>
