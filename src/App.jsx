@@ -35,7 +35,7 @@ function App() {
     console.log(cartCount);
   
     
-};
+  };
 
   return (
     <div className="App">
