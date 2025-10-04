@@ -28,6 +28,8 @@ function App() {
   };
   const removeFromCart = () =>{
     setCartCount(num => num - 1)
+    console.log(cartCount);
+    
   }
 
   const addBasket = () => {
