@@ -4,9 +4,17 @@ import '../cssInfo/MainCatalog.css'
 const Aside = () => {
   const [selectredMemory, setSelectredMemory] = useState ([]);
   const target = (event) => {
-    console.log(event.target.value);
+    const value = event.target.value;
+    
+    if (selectredMemory.includes(value)) {
+      setSelectredMemory(selectredMemory.filter(v => v !== value))
+    }else{
+      setSelectredMemory([...selectredMemory, value])
+    }
     
   }
+  console.log(selectredMemory);
+  
   return (
     <div>
         <aside className='rounded-sm flex flex-col gap-8 h-auto' >
