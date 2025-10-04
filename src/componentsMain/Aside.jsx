@@ -4,7 +4,7 @@ import '../cssInfo/MainCatalog.css'
 const Aside = () => {
   return (
     <div>
-        <aside className='rounded-sm flex flex-col gap-8' >
+        <aside className='rounded-sm flex flex-col gap-8 h-auto' >
           <div>
                 <p>Ціна, грн</p>
                 <div className='asideinput flex justify-between items-center mt-3' >
@@ -20,15 +20,48 @@ const Aside = () => {
             <div className='flex flex-col gap-2'>
               <p>Вбудована пам'ять</p>
               <div className='flex flex-col gap-1' >
-                <label><input type="checkbox" name="memory" value="512GB" /> 512GB</label>
+                <label><input type="checkbox" name="memory" value="512GB" className='' /> 512GB</label>
                 <label><input type="checkbox" name="memory" value="256GB" /> 256GB</label>
                 <label><input type="checkbox" name="memory" value="128GB" /> 128GB</label>
                 <label><input type="checkbox" name="memory" value="64GB" /> 64GB</label>
                 <label><input type="checkbox" name="memory" value="32GB" /> 32GB</label>
                 <p className='text-blue-700 cursor-pointer'>Ще</p>
               </div>
-
             </div>
+
+            <div className='flex flex-col gap-2'>
+              <p>Оперативна пам'ять</p>
+              <div className='flex flex-col gap-1' >
+                <label><input type="checkbox" name="memory" value="512GB" /> 1GB</label>
+                <label><input type="checkbox" name="memory" value="256GB" /> 1.5GB</label>
+                <label><input type="checkbox" name="memory" value="128GB" /> 2GB</label>
+                <label><input type="checkbox" name="memory" value="128GB" /> 4GB</label>
+                <label><input type="checkbox" name="memory" value="128GB" /> 6GB</label>
+                <p className='text-blue-700 cursor-pointer'>Ще</p>
+              </div>
+            </div>
+
+            <div className='flex flex-col gap-2'>
+              <p>Торгова марка</p>
+              <div className='flex flex-col gap-1' >
+                <label><input type="checkbox" name="memory" value="512GB" /> Apple</label>
+                <label><input type="checkbox" name="memory" value="256GB" /> Samsung</label>
+                <label><input type="checkbox" name="memory" value="128GB" /> Xiaomi</label>
+                <label><input type="checkbox" name="memory" value="64GB" /> Realme</label>
+                <label><input type="checkbox" name="memory" value="32GB" /> Oppo</label>
+                <p className='text-blue-700 cursor-pointer'>Ще</p>
+              </div>
+            </div>
+
+            <div className='flex flex-col gap-2'>
+              <p>Кількість ядер</p>
+              <div className='flex flex-col gap-1' >
+                <label><input type="checkbox" name="memory" value="512GB" /> 8</label>
+                <label><input type="checkbox" name="memory" value="256GB" /> 6</label>
+                <label><input type="checkbox" name="memory" value="128GB" /> 5</label>
+              </div>
+            </div>
+            <p className='text-blue-700 cursor-pointer' >Всі фільтри</p>
       </aside>
     </div>
   )
