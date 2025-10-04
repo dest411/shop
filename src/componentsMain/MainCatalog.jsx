@@ -9,11 +9,14 @@ const MainCatalog = ({
   inCart,
   removeFromCart,
   toggleHeart,
-  heart
+  heart,
+  phones,
+  selectedMemory,
+  setSelectedMemory
 }) => {
   return (
     <div className='MainCatalog flex gap-10' >
-      <Aside />
+      <Aside selectedMemory={selectedMemory} setSelectedMemory={setSelectedMemory} />
       <CatalogWithFilters
         addBasket={addBasket}
         handleClick={handleClick}
@@ -21,6 +24,7 @@ const MainCatalog = ({
         removeFromCart={removeFromCart}
         toggleHeart={toggleHeart}
         heart={heart}
+        phones={phones}
       />
     </div>
   )

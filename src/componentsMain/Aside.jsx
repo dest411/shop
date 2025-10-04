@@ -1,20 +1,21 @@
-import React, { useState } from 'react'
+
 import '../cssInfo/MainCatalog.css'
 
-const Aside = () => {
-  const [selectredMemory, setSelectredMemory] = useState ([]);
+const Aside = ({selectedMemory, setSelectedMemory}) => {
   const target = (event) => {
     const value = event.target.value;
     
-    if (selectredMemory.includes(value)) {
-      setSelectredMemory(selectredMemory.filter(v => v !== value))
+    if (selectedMemory.includes(value)) {
+      setSelectedMemory(selectedMemory.filter(v => v !== value))
     }else{
-      setSelectredMemory([...selectredMemory, value])
+      setSelectedMemory([...selectedMemory, value])
     }
     
   }
-  console.log(selectredMemory);
   
+
+  
+
   return (
     <div>
         <aside className='rounded-sm flex flex-col gap-8 h-auto' >
@@ -33,11 +34,11 @@ const Aside = () => {
             <div className='flex flex-col gap-2'>
               <p>Вбудована пам'ять</p>
               <div className='flex flex-col gap-1' >
-                <label><input onChange={target} checked={selectredMemory.includes("512GB")} type="checkbox" name="memory" value="512GB" className='' /> 512GB</label>
-                <label><input onChange={target} checked={selectredMemory.includes("256GB")} type="checkbox" name="memory" value="256GB" /> 256GB</label>
-                <label><input onChange={target} checked={selectredMemory.includes("128GB")} type="checkbox" name="memory" value="128GB" /> 128GB</label>
-                <label><input onChange={target} checked={selectredMemory.includes("64GB")} type="checkbox" name="memory" value="64GB" /> 64GB</label>
-                <label><input onChange={target} checked={selectredMemory.includes("32GB")} type="checkbox" name="memory" value="32GB" /> 32GB</label>
+                <label><input onChange={target} checked={selectedMemory.includes("512GB")} type="checkbox" name="memory" value="512GB" className='' /> 512GB</label>
+                <label><input onChange={target} checked={selectedMemory.includes("256GB")} type="checkbox" name="memory" value="256GB" /> 256GB</label>
+                <label><input onChange={target} checked={selectedMemory.includes("128GB")} type="checkbox" name="memory" value="128GB" /> 128GB</label>
+                <label><input onChange={target} checked={selectedMemory.includes("64GB")} type="checkbox" name="memory" value="64GB" /> 64GB</label>
+                <label><input onChange={target} checked={selectedMemory.includes("32GB")} type="checkbox" name="memory" value="32GB" /> 32GB</label>
                 <p className='text-blue-700 cursor-pointer'>Ще</p>
               </div>
             </div>
