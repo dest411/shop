@@ -28,6 +28,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px; /* відстань між картками по горизонталі і вертикалі */
+    position: relative;
 }
 .phone-image{
     display: flex;
