@@ -5,6 +5,7 @@ import './App.css'
 import Catalog from './components/Catalog';
 import Discounts from './components/Discounts';
 
+
 function App() {
 
   const [cartCount, setCartCount] = useState(0);
@@ -51,6 +52,7 @@ function App() {
         removeFromCart={removeFromCart}
         toggleHeart={toggleHeart}
         heart={heart}
+        
         />
     </div>
   );
