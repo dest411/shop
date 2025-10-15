@@ -38,13 +38,13 @@ const Catalog = () => {
                 onClick={() => setOffset(prev => Math.max(prev - 300, 0))} 
                 className='backr w-[30px] border-2
                     border-solid border-black rounded-[50%] 
-                    absolute left-0 top-[50%] cursor-pointer
+                    absolute -left-[30px] top-[50%] cursor-pointer
                     p-1 aspect-square rotate-180 z-0' alt="" />
+            <div className='text text-[32px] ' >
+                <h6>Каталог</h6>  
+            </div>
 
             <div className='catalog overflow-hidden mx-2'  >
-                <div className='text' >
-                    <h6>Каталог</h6>  
-                </div>
                 <div className="catalog-list  transition-transform" style={{ transform: `translateX(-${offset}px)` }}>
                     {catalogItems.map(item => (
                         <div key={item.id} className="item">
