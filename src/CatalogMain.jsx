@@ -4,40 +4,40 @@ import phones from './phones.jsx'
 import Info from './componentsMain/Info'
 import MainCatalog from './componentsMain/MainCatalog.jsx'
 
- 
 const CatalogMain = () => {
-  const [cartCount, setCartCount] = useState(0);
-  const [inCart, setInCart] = useState({});
-  const [heart, setHeart] = useState({});
-  const [selectedMemory, setSelectedMemory] = useState ([]);
-  
+  const [cartCount, setCartCount] = useState(0)
+  const [inCart, setInCart] = useState({})
+  const [heart, setHeart] = useState({})
+  const [filters, setFilters] = useState({
+    memory: [],
+    ram: [],
+    brand: [],
+    cores: []
+  })
 
   const toggleHeart = (id) => {
-    setHeart(prev => ({
-      ...prev,
-      [id]: !prev[id]
-    }));
-  };
+    setHeart(prev => ({ ...prev, [id]: !prev[id] }))
+  }
 
   const handleClick = (id) => {
-    setInCart(prev => ({
-      ...prev,
-      [id]: !prev[id]
-    }));
-  };
+    setInCart(prev => ({ ...prev, [id]: !prev[id] }))
+  }
 
   const removeFromCart = () => {
-    setCartCount(num => num - 1);
-  };
+    setCartCount(num => num - 1)
+  }
 
   const addBasket = () => {
-    setCartCount(prev => prev + 1);
-  };
+    setCartCount(prev => prev + 1)
+  }
+
+  // фільтрація
   const filteredPhones = phones.filter(phone => 
-  selectedMemory.length === 0 
-    ? true                        // якщо нічого не вибрано — показуємо всі
-    : selectedMemory.includes(phone.memory) // інакше — тільки ті, що в масиві вибраних
-  );
+    (filters.memory.length === 0 || filters.memory.includes(phone.memory)) &&
+    (filters.ram.length === 0 || filters.ram.includes(phone.ram)) &&
+    (filters.brand.length === 0 || filters.brand.includes(phone.brand)) &&
+    (filters.cores.length === 0 || filters.cores.includes(String(phone.cores)))
+  )
 
   return (
     <div>
@@ -50,8 +50,8 @@ const CatalogMain = () => {
         removeFromCart={removeFromCart}
         toggleHeart={toggleHeart}
         heart={heart}
-        selectedMemory={selectedMemory}
-        setSelectedMemory={setSelectedMemory}
+        filters={filters}
+        setFilters={setFilters}
         phones={filteredPhones}
       />
     </div>

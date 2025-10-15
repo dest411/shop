@@ -1,6 +1,5 @@
 import React from 'react'
 import '../css/Discounts.css'
-
 import heartt from '../png/Vector.svg';
 import redHeart from  '../png/redHeart.svg';
 
