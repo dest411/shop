@@ -11,12 +11,12 @@ const MainCatalog = ({
   toggleHeart,
   heart,
   phones,
-  selectedMemory,
-  setSelectedMemory
+  filters,
+  setFilters
 }) => {
   return (
-    <div className='MainCatalog flex gap-10' >
-      <Aside selectedMemory={selectedMemory} setSelectedMemory={setSelectedMemory} />
+    <div className='MainCatalog flex gap-10'>
+      <Aside filters={filters} setFilters={setFilters} />
       <CatalogWithFilters
         addBasket={addBasket}
         handleClick={handleClick}
