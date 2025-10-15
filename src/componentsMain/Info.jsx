@@ -31,10 +31,19 @@ const Info = ({setSortType }) => {
         <div className='filter' >
             <div className='flex gap-9' >
                 <h1>Сортування</h1>
-                <div className='flex gap-3 underline cursor-pointer' >
-                    <p onClick={() => setSortType('sales')} >за популярністю</p>
-                    <p onClick={() => setSortType('cheap')} >від дешевих до дорогих</p>
-                    <p onClick={() => setSortType('expensive')} >від дорогих до дешевих</p> 
+                <div className='flex gap-3  cursor-pointer' >
+                    <p  className={`${activeSort === 'sales' && 'text-orange-600' }`}
+                        onClick={() => {  
+                            setSortType('sales'); 
+                            setActiveSort('sales')}} >за популярністю</p>
+                    <p  className={`${activeSort === 'cheap' && 'text-orange-600' }`}
+                        onClick={() => { 
+                            setSortType('cheap'); 
+                            setActiveSort('cheap')}} >від дешевих до дорогих</p>
+                    <p  className={`${activeSort === 'expensive' && 'text-orange-600' }`} 
+                        onClick={() => { 
+                            setSortType('expensive'); 
+                            setActiveSort('expensive')}} >від дорогих до дешевих</p> 
                 </div>
                 
             </div>
