@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import React, {useState} from 'react'
 import '../css/Catalog.css'
 import backblack from '../png/backblack.svg'
 import image1 from '../png/image 1.png';
@@ -26,31 +26,39 @@ const catalogItems = [
 
 
 const Catalog = () => {
-  return (
-    <div className='catalog' >
-        <div className='text' >
-          <h6>Каталог</h6>  
-        </div>
-        <div className="catalog-list">
-            <img src={backblack} className='w-[30px] border-2
-             border-solid border-black rounded-[50%] 
-             absolute left-0 top-[3ну 5%] cursor-pointer
-              p-1 aspect-square rotate-180' alt="" />
 
-            {catalogItems.map(item => (
-                <div key={item.id} className="item">
-                    <div className="backg">
-                        <img src={item.image} alt={item.title} />
-                    </div>
-                    <p>{item.title}</p>
+    const [offset, setOffset] = useState(0);
+    const itemWidth = 150 + 16; // ширина item + margin-right (mr-4)
+    const containerWidth = 0.85 * window.innerWidth; // ширина видимого контейнера
+    const maxOffset = catalogItems.length * itemWidth - containerWidth;
+
+     return (
+        <div className='w-[90%] bg-black/10  m-auto relative ' >
+            <img src={backblack} 
+                onClick={() => setOffset(prev => Math.max(prev - 300, 0))} 
+                className='backr w-[30px] border-2
+                    border-solid border-black rounded-[50%] 
+                    absolute left-0 top-[50%] cursor-pointer
+                    p-1 aspect-square rotate-180 z-0' alt="" />
+
+            <div className='catalog overflow-hidden mx-2'  >
+                <div className='text' >
+                    <h6>Каталог</h6>  
                 </div>
-            ))}
-            <img src={backblack} className='backr' alt="" />
+                <div className="catalog-list  transition-transform" style={{ transform: `translateX(-${offset}px)` }}>
+                    {catalogItems.map(item => (
+                        <div key={item.id} className="item">
+                            <div className="backg">
+                                <img src={item.image} alt={item.title} />
+                            </div>
+                            <p>{item.title}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <img src={backblack} onClick={() => setOffset(prev => Math.min(prev + 300, maxOffset))} className='backr' alt="" />
         </div>
-        
-            
-        
-    </div>
+    
   )
 }
 

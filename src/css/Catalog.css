@@ -1,5 +1,5 @@
 .catalog{
-    width: 90%;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     box-sizing: border-box;
@@ -20,9 +20,7 @@
 .catalog-list {
   display: flex;
   gap: 30px;
-  overflow: hidden; /* <-- важливо! приховує елементи за межами */
   width: 100%;
-  position: relative;
 }
 .item{
     display: flex;
@@ -44,8 +42,9 @@
     padding: 4px;
     position: absolute;
     right: 0;
-    top: 35%;
+    top: 50%;
     cursor: pointer;
+    z-index: 0;
 }
 .text{
     margin-bottom: 50px;
