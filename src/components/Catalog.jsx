@@ -8,7 +8,20 @@ import image4 from '../png/image 4.png';
 import image5 from '../png/image 5.png';
 import image6 from '../png/image 6.png';
 
-
+const catalogItems = [
+  { id: 1, title: 'Смартфони', image: image1 },
+  { id: 2, title: 'Ноутбуки', image: image2 },
+  { id: 3, title: 'Комп\'ютери', image: image3 },
+  { id: 4, title: 'Телевізори', image: image4 },
+  { id: 5, title: 'Планшети', image: image5 },
+  { id: 6, title: 'Колонки', image: image6 },
+  { id: 7, title: 'Смартфони', image: image1 },
+  { id: 8, title: 'Ноутбуки', image: image2 },
+  { id: 9, title: 'Комп\'ютери', image: image3 },
+  { id: 10, title: 'Телевізори', image: image4 },
+  { id: 11, title: 'Планшети', image: image5 },
+  { id: 12, title: 'Колонки', image: image6 },
+];
 
 const Catalog = () => {
   return (
@@ -16,46 +29,18 @@ const Catalog = () => {
         <div className='text' >
           <h6>Каталог</h6>  
         </div>
-        <div className='catalog-list' >
-            
-            <div className='item' >
-                <div className='backg' >
-                    <img  src={image1} alt="" />
+        <div className="catalog-list">
+            {catalogItems.map(item => (
+                <div key={item.id} className="item">
+                    <div className="backg">
+                        <img src={item.image} alt={item.title} />
+                    </div>
+                    <p>{item.title}</p>
                 </div>
-                <p>Смартфони</p>
-            </div>
-            <div className='item' >
-                <div className='backg' >
-                    <img src={image2} alt="image5" />
-                </div>
-                <p>Ноутбуки</p>
-            </div>
-            <div className='item' >
-                <div className='backg' >
-                    <img src={image3} alt="image6" />
-                </div>
-                <p>Комп'ютери</p>
-            </div>
-            <div className='item' >
-                <div className='backg' >
-                    <img src={image4} alt="image6" />
-                </div>
-                <p>Телевізори</p>
-            </div>
-            <div className='item' >
-                <div className='backg' >
-                    <img src={image5} alt="image6" />
-                </div>
-                <p>Планшети</p>
-            </div>
-            <div className='item' >
-                <div className='backg' >
-                    <img src={image6} alt="image6" />
-                </div>
-                <p>Колонки</p>
-            </div>
-            <img src={backblack} className='backr'  alt="" />
+            ))}
+            <img src={backblack} className='backr' alt="" />
         </div>
+        
             
         
     </div>
