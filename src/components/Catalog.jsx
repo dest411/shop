@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState} from 'react'
 import '../css/Catalog.css'
 import backblack from '../png/backblack.svg'
 import image1 from '../png/image 1.png';
@@ -23,6 +23,8 @@ const catalogItems = [
   { id: 12, title: 'Колонки', image: image6 },
 ];
 
+
+
 const Catalog = () => {
   return (
     <div className='catalog' >
@@ -30,6 +32,11 @@ const Catalog = () => {
           <h6>Каталог</h6>  
         </div>
         <div className="catalog-list">
+            <img src={backblack} className='w-[30px] border-2
+             border-solid border-black rounded-[50%] 
+             absolute left-0 top-[3ну 5%] cursor-pointer
+              p-1 aspect-square rotate-180' alt="" />
+
             {catalogItems.map(item => (
                 <div key={item.id} className="item">
                     <div className="backg">
