@@ -28,23 +28,19 @@ const catalogItems = [
 const Catalog = () => {
 
     const [offset, setOffset] = useState(0);
-    const itemWidth = 150 + 16; // ширина item + margin-right (mr-4)
-    const containerWidth = 0.85 * window.innerWidth; // ширина видимого контейнера
-    const maxOffset = catalogItems.length * itemWidth - containerWidth;
-
-     return (
-        <div className='w-[90%] bg-black/10  m-auto relative ' >
-            <img src={backblack} 
-                onClick={() => setOffset(prev => Math.max(prev - 300, 0))} 
-                className='backr w-[30px] border-2
-                    border-solid border-black rounded-[50%] 
-                    absolute -left-[30px] top-[50%] cursor-pointer
-                    p-1 aspect-square rotate-180 z-0' alt="" />
+    return (
+        <div className='w-[90%] m-auto  ' >
+            
             <div className='text text-[32px] ' >
                 <h6>Каталог</h6>  
             </div>
 
-            <div className='catalog overflow-hidden mx-2'  >
+            <div className='catalog overflow-hidden mx-2 relative'  >
+                <img src={backblack} 
+                    onClick={() => setOffset(prev => Math.max(prev - 300, 0))} 
+                    className='backr2' alt="" 
+                />
+
                 <div className="catalog-list  transition-transform" style={{ transform: `translateX(-${offset}px)` }}>
                     {catalogItems.map(item => (
                         <div key={item.id} className="item">
@@ -55,8 +51,17 @@ const Catalog = () => {
                         </div>
                     ))}
                 </div>
+                <img src={backblack}
+                    className='backr' alt=""  
+                    onClick={() => {
+                        const itemWidth = 225; // ширина .item + gap (наприклад 200 + 30)
+                        const containerWidth = 0.85 * window.innerWidth; // видима ширина блоку
+                        const maxOffset = catalogItems.length * itemWidth - containerWidth;
+                        setOffset(prev => Math.min(prev + 300, maxOffset));
+                    }} 
+                />
             </div>
-            <img src={backblack} onClick={() => setOffset(prev => Math.min(prev + 300, maxOffset))} className='backr' alt="" />
+            
         </div>
     
   )

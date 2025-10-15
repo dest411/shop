@@ -41,10 +41,23 @@
     border-radius: 50%;
     padding: 4px;
     position: absolute;
-    right: -30px;
-    top: 50%;
+    right: 0px;
+    top: 40%;
     cursor: pointer;
-    z-index: 0;
+    z-index: 100;
+}
+.backr2 {
+    width: 30px;                /* квадрат */
+    aspect-ratio: 1 / 1;        /* забезпечує круг */
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 4px;
+    position: absolute;
+    left: 0px;
+    top: 40%;
+    cursor: pointer;
+    z-index: 100;
+    transform: rotate(180deg);
 }
 .text{
     margin-bottom: 50px;
