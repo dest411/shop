@@ -16,7 +16,8 @@ const phones = [
     brand: "Apple",
     ram: "6GB",
     memory: "128GB",
-    cores: 6
+    cores: 6,
+    sales: 100000
   },
   {
     id: 2,
@@ -29,7 +30,8 @@ const phones = [
     brand: "Apple",
     ram: "4GB",
     memory: "64GB",
-    cores: 6
+    cores: 6,
+    sales: 50000
   },
   {
     id: 3,
@@ -42,7 +44,8 @@ const phones = [
     brand: "Huawei",
     ram: "3GB",
     memory: "64GB",
-    cores: 4
+    cores: 4,
+    sales: 10000
   },
   {
     id: 4,
@@ -55,7 +58,8 @@ const phones = [
     brand: "Xiaomi",
     ram: "6GB",
     memory: "128GB",
-    cores: 8
+    cores: 8,
+    sales: 15000
   },
   {
     id: 5,
@@ -68,7 +72,8 @@ const phones = [
     brand: "Apple",
     ram: "6GB",
     memory: "128GB",
-    cores: 6
+    cores: 6,
+    sales: 90000
   },
 ];
 

@@ -11,11 +11,10 @@ import black3lines from '../png/sort/black/black3lines.svg'
 
 
 
-const Info = () => {
+const Info = ({setSortType }) => {
 
+    const [activeSort, setActiveSort] = useState('sales');
     const [viewfilter, setViewFilter] = useState(true);
-
-    const [sortOpen, setSortOpen] = useState(false);
 
   return (
     <div className='info'  >
@@ -30,12 +29,12 @@ const Info = () => {
             </Link>
         </div>
         <div className='filter' >
-            <div onClick={() => setSortOpen(! sortOpen) } className='flex gap-9' >
+            <div className='flex gap-9' >
                 <h1>Сортування</h1>
-                <div  className='flex gap-3 underline cursor-pointer' >
-                    <p>за популярністю</p>
-                    <p>від дешевих до дорогих</p>
-                    <p>від дорогих до дешевих</p> 
+                <div className='flex gap-3 underline cursor-pointer' >
+                    <p onClick={() => setSortType('sales')} >за популярністю</p>
+                    <p onClick={() => setSortType('cheap')} >від дешевих до дорогих</p>
+                    <p onClick={() => setSortType('expensive')} >від дорогих до дешевих</p> 
                 </div>
                 
             </div>

@@ -10,7 +10,7 @@ const CatalogMain = () => {
   const [heart, setHeart] = useState({})
   const [priceLow, setPriceLow] = useState("");
   const [priceHigh, setPriceHigh] = useState("");
-
+  const [sortType, setSortType] = useState('sales')
   const [filters, setFilters] = useState({
     memory: [],
     ram: [],
@@ -44,11 +44,27 @@ const CatalogMain = () => {
     (!priceHigh || Number(phone.price.replace(/\s|₴/g, '')) <= Number(priceHigh))
   );
 
+  let sortedPhones = [...filteredPhones];
+
+  if (sortType === 'cheap') {
+    sortedPhones.sort((a, b) => 
+        Number(a.price.replace(/\s|₴/g, '')) - Number(b.price.replace(/\s|₴/g, ''))
+    );
+  } else if (sortType === 'expensive') {
+      sortedPhones.sort((a, b) => 
+          Number(b.price.replace(/\s|₴/g, '')) - Number(a.price.replace(/\s|₴/g, ''))
+      );
+  } else if (sortType === 'sales') {
+      sortedPhones.sort((a, b) => b.sales - a.sales); // від більшого до меншого
+  }
+
+
+
 
   return (
     <div>
       <Header cartCount={cartCount} />
-      <Info />
+      <Info setSortType={setSortType} />
       <MainCatalog
         addBasket={addBasket}
         handleClick={handleClick}
@@ -62,7 +78,7 @@ const CatalogMain = () => {
         setPriceLow={setPriceLow} 
         priceHigh={priceHigh} 
         setPriceHigh={setPriceHigh} 
-        phones={filteredPhones}
+        phones={sortedPhones}
       />
     </div>
   )
