@@ -11,6 +11,7 @@ const CatalogMain = () => {
   const [priceLow, setPriceLow] = useState("");
   const [priceHigh, setPriceHigh] = useState("");
   const [sortType, setSortType] = useState('sales')
+  const [viewfilter, setViewFilter] = useState(true);
   const [filters, setFilters] = useState({
     memory: [],
     ram: [],
@@ -64,7 +65,7 @@ const CatalogMain = () => {
   return (
     <div>
       <Header cartCount={cartCount} />
-      <Info setSortType={setSortType} />
+      <Info setSortType={setSortType} viewfilter={viewfilter} setViewFilter={setViewFilter} />
       <MainCatalog
         addBasket={addBasket}
         handleClick={handleClick}

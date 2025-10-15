@@ -11,10 +11,10 @@ import black3lines from '../png/sort/black/black3lines.svg'
 
 
 
-const Info = ({setSortType }) => {
+const Info = ({setSortType, viewfilter, setViewFilter }) => {
 
     const [activeSort, setActiveSort] = useState('sales');
-    const [viewfilter, setViewFilter] = useState(true);
+
 
   return (
     <div className='info'  >
@@ -59,7 +59,6 @@ const Info = ({setSortType }) => {
                         <img src={black3lines} alt="" />
                     </>
                 )}
-
             </div>
             
         </div>
