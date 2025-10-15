@@ -5,39 +5,42 @@ import Info from './componentsMain/Info'
 import MainCatalog from './componentsMain/MainCatalog.jsx'
 
 const CatalogMain = () => {
-  const [cartCount, setCartCount] = useState(0)
-  const [inCart, setInCart] = useState({})
-  const [heart, setHeart] = useState({})
-  const [filters, setFilters] = useState({
-    memory: [],
-    ram: [],
-    brand: [],
-    cores: []
-  })
+  const [cartCount, setCartCount] = useState(0);
+  const [inCart, setInCart] = useState({});
+  const [heart, setHeart] = useState({});
+  const [selectedMemory, setSelectedMemory] = useState([]);
+  const [priceFrom, setPriceFrom] = useState('');
+  const [priceTo, setPriceTo] = useState('');
 
   const toggleHeart = (id) => {
-    setHeart(prev => ({ ...prev, [id]: !prev[id] }))
-  }
+    setHeart(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
 
   const handleClick = (id) => {
-    setInCart(prev => ({ ...prev, [id]: !prev[id] }))
-  }
+    setInCart(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
 
-  const removeFromCart = () => {
-    setCartCount(num => num - 1)
-  }
+  const removeFromCart = () => setCartCount(num => num - 1);
+  const addBasket = () => setCartCount(prev => prev + 1);
 
-  const addBasket = () => {
-    setCartCount(prev => prev + 1)
-  }
+  const filteredPhones = phones.filter(phone => {
+    // перевірка пам'яті
+    const memoryCheck = selectedMemory.length === 0 || selectedMemory.includes(phone.memory);
 
-  // фільтрація
-  const filteredPhones = phones.filter(phone => 
-    (filters.memory.length === 0 || filters.memory.includes(phone.memory)) &&
-    (filters.ram.length === 0 || filters.ram.includes(phone.ram)) &&
-    (filters.brand.length === 0 || filters.brand.includes(phone.brand)) &&
-    (filters.cores.length === 0 || filters.cores.includes(String(phone.cores)))
-  )
+    // перевірка ціни
+    const priceNum = parseInt(phone.price.replace(/\s|₴/g, ''));
+    const from = priceFrom ? parseInt(priceFrom) : 0;
+    const to = priceTo ? parseInt(priceTo) : Infinity;
+    const priceCheck = priceNum >= from && priceNum <= to;
+
+    return memoryCheck && priceCheck;
+  });
 
   return (
     <div>
@@ -50,8 +53,12 @@ const CatalogMain = () => {
         removeFromCart={removeFromCart}
         toggleHeart={toggleHeart}
         heart={heart}
-        filters={filters}
-        setFilters={setFilters}
+        selectedMemory={selectedMemory}
+        setSelectedMemory={setSelectedMemory}
+        priceFrom={priceFrom}
+        priceTo={priceTo}
+        setPriceFrom={setPriceFrom}
+        setPriceTo={setPriceTo}
         phones={filteredPhones}
       />
     </div>
