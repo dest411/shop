@@ -8,7 +8,9 @@ const CatalogMain = () => {
   const [cartCount, setCartCount] = useState(0)
   const [inCart, setInCart] = useState({})
   const [heart, setHeart] = useState({})
-  
+  const [priceLow, setPriceLow] = useState("");
+  const [priceHigh, setPriceHigh] = useState("");
+
   const [filters, setFilters] = useState({
     memory: [],
     ram: [],
@@ -37,8 +39,11 @@ const CatalogMain = () => {
     (filters.memory.length === 0 || filters.memory.includes(phone.memory)) &&
     (filters.ram.length === 0 || filters.ram.includes(phone.ram)) &&
     (filters.brand.length === 0 || filters.brand.includes(phone.brand)) &&
-    (filters.cores.length === 0 || filters.cores.includes(String(phone.cores)))
-  )
+    (filters.cores.length === 0 || filters.cores.includes(String(phone.cores))) &&
+    (!priceLow || Number(phone.price.replace(/\s|₴/g, '')) >= Number(priceLow)) &&
+    (!priceHigh || Number(phone.price.replace(/\s|₴/g, '')) <= Number(priceHigh))
+  );
+
 
   return (
     <div>
@@ -53,6 +58,10 @@ const CatalogMain = () => {
         heart={heart}
         filters={filters}
         setFilters={setFilters}
+        priceLow={priceLow} 
+        setPriceLow={setPriceLow} 
+        priceHigh={priceHigh} 
+        setPriceHigh={setPriceHigh} 
         phones={filteredPhones}
       />
     </div>

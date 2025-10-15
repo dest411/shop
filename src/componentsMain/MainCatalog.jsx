@@ -12,11 +12,23 @@ const MainCatalog = ({
   heart,
   phones,
   filters,
-  setFilters
+  setFilters,
+  priceLow,
+  setPriceLow,
+  priceHigh,
+  setPriceHigh
 }) => {
   return (
     <div className='MainCatalog flex gap-10'>
-      <Aside filters={filters} setFilters={setFilters} />
+      <Aside 
+        filters={filters} 
+        setFilters={setFilters} 
+        priceLow={priceLow} 
+        setPriceLow={setPriceLow} 
+        priceHigh={priceHigh} 
+        setPriceHigh={setPriceHigh} 
+      />
+
       <CatalogWithFilters
         addBasket={addBasket}
         handleClick={handleClick}
