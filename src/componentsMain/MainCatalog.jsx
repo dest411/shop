@@ -17,7 +17,7 @@ const MainCatalog = ({
   setPriceLow,
   priceHigh,
   setPriceHigh
-}) => {
+  }) => {
   return (
     <div className='MainCatalog flex gap-10'>
       <Aside 

@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import '../cssInfo/Info.css'
 import backBlack from '../png/backblack.svg'
-import arrows1 from '../png/arrows/Vector 4.svg'
-import arrows2 from '../png/arrows/Vector 5.svg'
+// import arrows1 from '../png/arrows/Vector 4.svg'
+// import arrows2 from '../png/arrows/Vector 5.svg'
 import black4squares from '../png/sort/black/black4square.svg'
 import white3lines from '../png/sort/white/white3lines.svg'
 import white4squares from '../png/sort/white/white4square.svg'
@@ -30,21 +30,13 @@ const Info = () => {
             </Link>
         </div>
         <div className='filter' >
-            <div onClick={() => setSortOpen(! sortOpen) } className='sort' >
-                <div className='sortImg' >
-                    <img src={arrows2} alt="" />
-                    <img src={arrows1} alt="" />  
+            <div onClick={() => setSortOpen(! sortOpen) } className='flex gap-9' >
+                <h1>Сортування</h1>
+                <div  className='flex gap-3 underline cursor-pointer' >
+                    <p>за популярністю</p>
+                    <p>від дешевих до дорогих</p>
+                    <p>від дорогих до дешевих</p> 
                 </div>
-                
-                <p>За популярністю</p>
-
-                {sortOpen ? (
-                  <div className='sorttext mt-56' >
-                    <p>За популярністю</p>
-                    <p>Від дешевих до дорогих</p>
-                    <p>Від дорогих до дешевих</p>
-                </div>  
-                ):null}
                 
             </div>
             <div className='view' >

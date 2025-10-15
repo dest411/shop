@@ -56,7 +56,8 @@
 .filter{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:right;
+    gap: 50px;
 }
 .sorttext{
     width: 200px;
