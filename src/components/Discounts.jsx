@@ -15,12 +15,12 @@ const Discounts = ({addBasket, handleClick, inCart, removeFromCart, toggleHeart,
             <h6 >Знижки</h6>
             <span></span>
         </div>
-        <div className='w-full relative' >
+        <div className='w-full overflow-hidden relative' >
           <img src={backblack} 
                     onClick={() => setOffset(prev => Math.max(prev - 300, 0))} 
                     className='w-[30px] aspect-square border-2 border-black rounded-full p-1.5 absolute left-0 top-1/2 cursor-pointer z-20 rotate-180' alt="" 
                 />
-            <div className='phones-list overflow-hidden  transition-transform' style={{ transform: `translateX(-${offset}px)` }} >
+            <div className='w-[95%] m-auto m-0 flex gap-[40px] relative transition-transform' style={{ transform: `translateX(-${offset}px)` }} >
                 {phones.map((phone) =>(
                     <div key={phone.id} className='phone-card' >
                         <div className='phone-image' >

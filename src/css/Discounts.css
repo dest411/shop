@@ -25,9 +25,14 @@
 .phones-list {
     width: 95%;
     margin: 0 auto;
-    display: flex;
+    
     gap: 40px;
     position: relative;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px; /* відстань між картками по горизонталі і вертикалі */
+
 }
 .phone-image{
     display: flex;
