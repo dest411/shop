@@ -76,7 +76,7 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
               // SDKFBSBKDFBJS
               <div className='flex flex-col items-center w-full h-auto  '>
                 {phones.map((phone) => (
-                  <div key={phone.id} className='flex justify-center items-center w-full h-full bg-slate-200  py-7'>
+                  <div key={phone.id} className='flex  w-full h-full  py-7'>
                     <div className='flex w-[70%]  h-auto gap-4' > 
                       <div className='relative '  >
                           <img src={phone.image} alt={phone.title} />
@@ -110,10 +110,10 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                       </div>
                     </div>
 
-                    <div className=' w-[30%] h-[100%] ' >
-                      <div className='flex gap-4' >
+                    <div className=' w-[30%] h-[100%] gap-4 flex flex-col items-center justify-start' >
+                      <div className='flex gap-4 items-end' >
                         <h1 className='text-2xl' >{phone.price}</h1>
-                        <h4 className='text-sm line-through' >{phone.oldPrice}</h4>
+                        <h4  className='text-m text-gray-600 line-through' >{phone.oldPrice}</h4>
                       </div>
                       <div className='flex gap-10' >
                         <img
