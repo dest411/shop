@@ -72,11 +72,38 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                 )}
                 </>
              ): (
-              <div className='flex flex-col justify-center items-center bg-black/10 w-full '>
+              <div className='flex flex-col justify-center items-center w-full '>
                 {phones.map((phone) => (
-                  <div key={phone.id} className='flex flex-col items-center bg-slate-500 relative'>
-                    <img src={phone.image} alt={phone.title} />
-                    <span className='wi'>{phone.discount}</span>
+                  <div key={phone.id} className='flex flex-col items-center py-7'>
+                    <div className='flex justify-center items-center' > 
+                      <div className='relative bg-blue-500 '  >
+                          <img src={phone.image} alt={phone.title} />
+                          <span className="
+                            absolute 
+                            bg-[#EBBA1A] 
+                            text-black 
+                            w-[65px] 
+                            h-[45px] 
+                            rounded-[12px] 
+                            flex 
+                            items-center 
+                            justify-center 
+                            text-[18px] 
+                            right-0
+                            top-0
+                          ">
+                            {phone.discount}
+                          </span>
+                          <p></p>
+                      </div>
+                      <div className='flex flex-col items-start justify-start bg-slate-300 h-full ' >
+                        <p>hello</p>
+                        pasdas
+                      </div>
+                    </div>
+                    <div></div>
+                    
+
 
                   </div>
                 ))}
