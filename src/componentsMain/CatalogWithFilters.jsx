@@ -73,7 +73,11 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                 )}
                 </div>
              ): (
-              // SDKFBSBKDFBJS
+              // 3 lines
+              <>
+                {phones.length === 0 ? (
+                  <p className='w-full text-4xl'>Змініть фільтри, нічого не знайдено</p>
+                ) : (
               <div className='flex flex-col items-center w-full h-auto  '>
                 {phones.map((phone) => (
                   <div key={phone.id} className='flex  w-full h-full  py-7'>
@@ -152,7 +156,10 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                   </div>
                 ))}
               </div>
-             )}   
+             
+             )}  
+            </> 
+             )}
         </div>
       </div>
   )
