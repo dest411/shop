@@ -72,7 +72,7 @@ const Discounts = ({addBasket, handleClick, inCart, removeFromCart, toggleHeart,
                 ))}
             </div>
             <img src={backblack} 
-                  onClick={() => setOffset(prev => Math.min(prev + 300, phones.length * 225 - 0.85 * window.innerWidth))} 
+                  onClick={() => setOffset(prev => Math.min(prev + 300, phones.length * 300 - 0.85 * window.innerWidth))} 
                   className='w-[30px] aspect-square border-2 border-black rounded-full p-1.5 absolute right-0 top-1/2 cursor-pointer z-20 ' alt="" 
               />
           </div>

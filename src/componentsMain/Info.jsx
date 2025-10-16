@@ -23,7 +23,7 @@ const Info = ({setSortType, viewfilter, setViewFilter }) => {
             <p>Смартфони</p>
         </div>
         <div className='titleInfo' >
-            <Link to="/App" style={{ textDecoration: 'none', color: 'black', display:'flex', gap:"15px", alignItems: 'center' }} >
+            <Link to="/" style={{ textDecoration: 'none', color: 'black', display:'flex', gap:"15px", alignItems: 'center' }} >
                 <img src={backBlack} alt="" />
                 <h6>Смартфони</h6>
             </Link>
