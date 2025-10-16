@@ -24,10 +24,9 @@
 }
 .phones-list {
     width: 95%;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px; /* відстань між картками по горизонталі і вертикалі */
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
     position: relative;
 }
 .phone-image{
@@ -72,7 +71,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    
+    flex: 0 0 250px;
 }
 .phone-card:hover{
     box-shadow: -2px -1px 50px -40px rgba(0,0,0,0.75);
@@ -162,3 +161,20 @@
     margin-bottom: 20px;
     transition: all 0.1s ease-in;
 }
+
+
+/* arrows */
+
+.backr2 {
+    width: 30px;                /* квадрат */
+    aspect-ratio: 1 / 1;        /* забезпечує круг */
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 4px;
+    position: absolute;
+    left: 0px;
+    top: 40%;
+    cursor: pointer;
+    z-index: 20;
+    transform: rotate(180deg);
+} 
