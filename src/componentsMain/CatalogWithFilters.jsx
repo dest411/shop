@@ -76,7 +76,7 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
               <div className='flex flex-col items-center w-full h-auto  '>
                 {phones.map((phone) => (
                   <div key={phone.id} className='flex justify-between w-full h-full  items-center py-7'>
-                    <div className='flex items-center w-full h-auto' > 
+                    <div className='flex w-full h-auto gap-4' > 
                       <div className='relative '  >
                           <img src={phone.image} alt={phone.title} />
                           <span className="
@@ -97,12 +97,54 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                           </span>
                           <p></p>
                       </div>
-                      <div className='flex flex-col items-start justify-start bg-slate-300 h-full ' >
-                        <p>{phone.title}</p>
+                      <div className='flex flex-col gap-4 items-start justify-start w-auto h-full ' >
+                        <h1 className='text-2xl' >{phone.title}</h1>
+                        <div>
+                          <p className='text-gray-600' >{`Оперативна пам'ять: ${phone.ram}`}</p>
+                          <p className='text-gray-600' >{`Кількість ядер: ${phone.cores}`}</p>
+                        </div>
+                        {phone.inStock ? (
+                          <p className='text-green-600' >В наявності</p>
+                        ) : ( <p className='text-red-600' >Закінчився</p> )}
                       </div>
                     </div>
-                    <div>
-                      <button>sss</button>
+                    <div className='bg-slate-200 w-full h-full ' >
+                      <div className='flex gap-4' >
+                        <h1>{phone.price}</h1>
+                        <h4>{phone.oldPrice}</h4>
+                      </div>
+                      <div className='flex gap-5' >
+                        <img
+                            onClick={() => toggleHeart(phone.id)}
+                            src={heart[phone.id] ? redHeart : heartt}
+                            alt="heart"
+                          />
+                        {phone.inStock ? (
+                        inCart[phone.id] ? (
+                          <button
+                            onClick={() => {
+                              handleClick(phone.id);
+                              removeFromCart(phone.id);
+                            }}
+                            className='buttonremove'
+                          >
+                            Видалити з корзини
+                          </button>
+                        ) : (
+                          <button
+                            onClick={() => {
+                              addBasket(phone.id);
+                              handleClick(phone.id);
+                            }}
+                            className='button'
+                          >
+                            В корзину
+                          </button>
+                        )
+                      ) : (
+                        <button className='buttonfalse'>Сповістити про наявність</button>
+                      )}
+                      </div>
                     </div>
                   </div>
                 ))}
