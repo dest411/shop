@@ -85,22 +85,10 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                   <div key={phone.id} className='flex  w-full h-full  py-7'>
                     <div className='flex w-[70%]  h-auto gap-4' > 
                       <div className='relative '  >
-                          <img src={phone.image} alt={phone.title} />
-                          <span className="
-                            absolute 
-                            bg-[#EBBA1A] 
-                            text-black 
-                            w-[65px] 
-                            h-[45px] 
-                            rounded-[12px] 
-                            flex 
-                            items-center 
-                            justify-center 
-                            text-[18px] 
-                            right-0
-                            top-0
-                          ">
-                            {phone.discount}
+                          <img src={phone.image} className='w-[160px] h-[200px]' alt={phone.title} />
+                          <span 
+                                className="absolute bg-[#EBBA1A] text-black w-[65px] h-[45px] rounded-[12px] flex items-center justify-center text-[18px] right-0 top-0">
+                                {phone.discount}
                           </span>
                           <p></p>
                       </div>
