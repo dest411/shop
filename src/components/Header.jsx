@@ -8,7 +8,7 @@ import profile from '../png/icon profile.svg'
 
 const Header = ({cartCount}) => {
   return (
-    <div className='header-fixed' >
+    <div className='header-fixed z-50' >
         <div className='header' >
             <Link to = "/">
                 <div className='logo' >

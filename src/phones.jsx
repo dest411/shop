@@ -3,11 +3,13 @@ import iphone12 from './png/phones/iphone_12_64gb.png';
 import iphone14 from './png/phones/iphone_14_128gb.png';
 import iphone14pro from './png/phones/iphone_14_pro_128gb.png';
 import xiaomiredmi128gb from './png/phones/xiaomi_redmi_128gb.png';
+import samsungS23Ultra from './png/phones/samsung_galaxy_s23_ultra.png';
+import googlePixel7Pro from './png/phones/google_pixel_7pro.png';
 
 const phones = [
   {
     id: 1,
-    title: "Смартфон Apple iPhone Pro 14 128GB",
+    title: "Смартфон Apple iPhone 14 Pro 128GB",
     price: "84 999 ₴",
     oldPrice: "88 000 ₴",
     discount: "-4%",
@@ -75,6 +77,77 @@ const phones = [
     cores: 6,
     sales: 90000
   },
+  {
+    id: 6,
+    title: "Смартфон Samsung Galaxy S23 Ultra 256GB",
+    price: "54 999 ₴",
+    oldPrice: "61 000 ₴",
+    discount: "-10%",
+    image: samsungS23Ultra,
+    inStock: true,
+    brand: "Samsung",
+    ram: "12GB",
+    memory: "256GB",
+    cores: 8,
+    sales: 85000
+  },
+  {
+    id: 7,
+    title: "Смартфон Google Pixel 7 Pro 128GB",
+    price: "35 500 ₴",
+    oldPrice: "38 000 ₴",
+    discount: "-7%",
+    image: googlePixel7Pro,
+    inStock: true,
+    brand: "Google",
+    ram: "12GB",
+    memory: "128GB",
+    cores: 8,
+    sales: 45000
+  },
+  // {
+  //   id: 8,
+  //   title: "Смартфон Samsung Galaxy A54 128GB",
+  //   price: "15 999 ₴",
+  //   oldPrice: "18 500 ₴",
+  //   discount: "-14%",
+  //   image: samsungA54,
+  //   inStock: false,
+  //   brand: "Samsung",
+  //   ram: "8GB",
+  //   memory: "128GB",
+  //   cores: 8,
+  //   sales: 120000
+  // },
+  // {
+  //   id: 9,
+  //   title: "Смартфон Xiaomi Redmi Note 12 Pro 256GB",
+  //   price: "13 499 ₴",
+  //   oldPrice: "15 000 ₴",
+  //   discount: "-10%",
+  //   image: xiaomiRedmiNote12,
+  //   inStock: true,
+  //   brand: "Xiaomi",
+  //   ram: "8GB",
+  //   memory: "256GB",
+  //   cores: 8,
+  //   sales: 110000
+  // },
+  // {
+  //   id: 10,
+  //   title: "Смартфон Apple iPhone 13 128GB",
+  //   price: "32 999 ₴",
+  //   oldPrice: "35 000 ₴",
+  //   discount: "-6%",
+  //   image: iphone13,
+  //   inStock: true,
+  //   brand: "Apple",
+  //   ram: "4GB",
+  //   memory: "128GB",
+  //   cores: 6,
+  //   sales: 150000
+  // }
+  
 ];
 
 export default phones

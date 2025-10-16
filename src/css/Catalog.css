@@ -44,7 +44,7 @@
     right: 0px;
     top: 40%;
     cursor: pointer;
-    z-index: 100;
+    z-index: 20;
 }
 .backr2 {
     width: 30px;                /* квадрат */
@@ -56,7 +56,7 @@
     left: 0px;
     top: 40%;
     cursor: pointer;
-    z-index: 100;
+    z-index: 20;
     transform: rotate(180deg);
 }
 .text{
