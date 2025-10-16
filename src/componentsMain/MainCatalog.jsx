@@ -16,7 +16,8 @@ const MainCatalog = ({
   priceLow,
   setPriceLow,
   priceHigh,
-  setPriceHigh
+  setPriceHigh,
+  viewfilter
   }) => {
   return (
     <div className='MainCatalog flex gap-10'>
@@ -37,6 +38,7 @@ const MainCatalog = ({
         toggleHeart={toggleHeart}
         heart={heart}
         phones={phones}
+        viewfilter={viewfilter}
       />
     </div>
   )

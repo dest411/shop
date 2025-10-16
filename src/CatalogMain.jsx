@@ -80,6 +80,7 @@ const CatalogMain = () => {
         priceHigh={priceHigh} 
         setPriceHigh={setPriceHigh} 
         phones={sortedPhones}
+        viewfilter={viewfilter}
       />
     </div>
   )
