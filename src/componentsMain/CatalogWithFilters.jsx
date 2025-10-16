@@ -12,7 +12,7 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
             <div className='phones-list '>
             
                 {phones.length === 0 ? (
-                  <div className=' absolute top-[10%]'>
+                  <div className=' w-[1000px]'>
                     <p className=' w-full  text-4xl'>Змініть фільтри, нічого не знайдено</p>
                   </div>
                 ) : (
@@ -76,7 +76,9 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
               // 3 lines
               <>
                 {phones.length === 0 ? (
-                  <p className='w-full text-4xl'>Змініть фільтри, нічого не знайдено</p>
+                  <div className='' >
+                    <p className='w-full text-4xl'>Змініть фільтри, нічого не знайдено</p>
+                  </div>
                 ) : (
               <div className='flex flex-col items-center w-full h-auto  '>
                 {phones.map((phone) => (
