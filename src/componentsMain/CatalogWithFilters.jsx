@@ -73,10 +73,11 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                 )}
                 </div>
              ): (
+              // SDKFBSBKDFBJS
               <div className='flex flex-col items-center w-full h-auto  '>
                 {phones.map((phone) => (
-                  <div key={phone.id} className='flex justify-between w-full h-full  items-center py-7'>
-                    <div className='flex w-full h-auto gap-4' > 
+                  <div key={phone.id} className='flex justify-center items-center w-full h-full bg-slate-200  py-7'>
+                    <div className='flex w-[70%]  h-auto gap-4' > 
                       <div className='relative '  >
                           <img src={phone.image} alt={phone.title} />
                           <span className="
@@ -108,13 +109,15 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                         ) : ( <p className='text-red-600' >Закінчився</p> )}
                       </div>
                     </div>
-                    <div className='bg-slate-200 w-full h-full ' >
+
+                    <div className=' w-[30%] h-[100%] ' >
                       <div className='flex gap-4' >
-                        <h1>{phone.price}</h1>
-                        <h4>{phone.oldPrice}</h4>
+                        <h1 className='text-2xl' >{phone.price}</h1>
+                        <h4 className='text-sm line-through' >{phone.oldPrice}</h4>
                       </div>
-                      <div className='flex gap-5' >
+                      <div className='flex gap-10' >
                         <img
+                            className='cursor-pointer'
                             onClick={() => toggleHeart(phone.id)}
                             src={heart[phone.id] ? redHeart : heartt}
                             alt="heart"
