@@ -15,7 +15,7 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                   <div className=' w-[1000px]'>
                     <p className=' w-full  text-4xl'>Змініть фільтри, нічого не знайдено</p>
                   </div>
-                ) : (
+                ) : ( 
                   phones.map((phone) => (
                     <div key={phone.id} className='phone-card'>
                       <div className='phone-image'>
