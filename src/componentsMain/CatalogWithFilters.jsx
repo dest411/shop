@@ -5,11 +5,12 @@ import redHeart from  '../png/redHeart.svg';
 
 const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, toggleHeart, heart, phones, viewfilter }) => {
   return (
-    <div className='w-full'>
-      <div className='w-full h-auto'>
-        <div className='phones-list '>
+    <div className='w-full h-auto '>
+      <div className='w-full h-auto '>
+        
           {viewfilter ? (
-            <>
+            <div className='phones-list '>
+            
                 {phones.length === 0 ? (
                   <div className=' absolute top-[10%]'>
                     <p className=' w-full  text-4xl'>Змініть фільтри, нічого не знайдено</p>
@@ -70,13 +71,13 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                     </div>
                   ))
                 )}
-                </>
+                </div>
              ): (
-              <div className='flex flex-col justify-center items-center w-full '>
+              <div className='flex flex-col items-center w-full h-auto  '>
                 {phones.map((phone) => (
-                  <div key={phone.id} className='flex flex-col items-center py-7'>
-                    <div className='flex justify-center items-center' > 
-                      <div className='relative bg-blue-500 '  >
+                  <div key={phone.id} className='flex justify-between w-full h-full  items-center py-7'>
+                    <div className='flex items-center w-full h-auto' > 
+                      <div className='relative '  >
                           <img src={phone.image} alt={phone.title} />
                           <span className="
                             absolute 
@@ -97,21 +98,18 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                           <p></p>
                       </div>
                       <div className='flex flex-col items-start justify-start bg-slate-300 h-full ' >
-                        <p>hello</p>
-                        pasdas
+                        <p>{phone.title}</p>
                       </div>
                     </div>
-                    <div></div>
-                    
-
-
+                    <div>
+                      <button>sss</button>
+                    </div>
                   </div>
                 ))}
               </div>
              )}   
         </div>
       </div>
-    </div>
   )
 }
 

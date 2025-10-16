@@ -20,7 +20,7 @@ const MainCatalog = ({
   viewfilter
   }) => {
   return (
-    <div className='MainCatalog flex gap-10'>
+    <div className='MainCatalog flex w-full h-full gap-10'>
       <Aside 
         filters={filters} 
         setFilters={setFilters} 
