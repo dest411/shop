@@ -8,12 +8,10 @@ const PhoneCard = () => {
   const phone = phones.find((p) => p.id === parseInt(id));
 
   return (
-    <div className='' >
+    <div className='flex flex-col justify-center items-center' >
         <Header/>        
-        <div className='bg-red-500 mt-40' >
-          <h1>{phone.id}</h1>
-        sd
-        fsfds
+        <div className='bg-red-500 mt-40 w-[90%] ' >
+          <h1>{phone.title}</h1>
         </div>
         
     </div>
