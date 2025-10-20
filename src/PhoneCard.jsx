@@ -18,8 +18,8 @@ const PhoneCard = () => {
           <PhoneCardNavigate/>
           <div className='flex justify-between w-full h-auto' >
             <img className='w-[410px] h-[580px]' src={phone.image} alt="" />
-            <div className=' flex flex-col items-start p-4'  >
-              {/* info */}
+            <div className=' flex flex-col items-start py-4'  >
+
               <p className='text-3xl font-medium' >{phone.title}</p>
               <p className='text-[20px] mt-4' >Колір: {phone.color}</p>
               <p className='mt-5 text-xl font-medium' >Характеристики: </p>
@@ -29,11 +29,11 @@ const PhoneCard = () => {
                 <p>Оперативна пам'ять: {phone.ram}</p>
                 <p>Кількість ядер: {phone.cores}</p>
               </div>
-              <p>Всі характерики</p>
+              <p className='mt-5 text-lg cursor-pointer text-blue-700'>Всі характерики</p>
               
             </div>
-            <div>
-              {phone.price}
+            <div className=' flex flex-col items-start py-4' >
+              <p className='text-2xl font-bold'>{phone.price}</p>
             </div>
           </div>
         </div>
