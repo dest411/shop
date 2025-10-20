@@ -16,12 +16,21 @@ const PhoneCard = () => {
         <Header/>        
         <div className=' mt-36 w-[90%] flex flex-col gap-8 ' >
           <PhoneCardNavigate/>
-          <div className='flex justify-between w-full h-auto bg-slate-500' >
+          <div className='flex justify-between w-full h-auto' >
             <img className='w-[410px] h-[580px]' src={phone.image} alt="" />
-            <div className='bg-black/10 flex flex-col items-start'  >
+            <div className=' flex flex-col items-start p-4'  >
               {/* info */}
-              <p className='text-3xl' >{phone.title}</p>
-              <p className='text-[20px] mt-3' >Колір: {phone.color}</p>
+              <p className='text-3xl font-medium' >{phone.title}</p>
+              <p className='text-[20px] mt-4' >Колір: {phone.color}</p>
+              <p className='mt-5 text-xl font-medium' >Характеристики: </p>
+              <div className='text-black/70 mt-3 flex flex-col text-lg gap-1' >
+                <p>Бренд: {phone.brand}</p>
+                <p>Пам'ять: {phone.memory} </p>
+                <p>Оперативна пам'ять: {phone.ram}</p>
+                <p>Кількість ядер: {phone.cores}</p>
+              </div>
+              <p>Всі характерики</p>
+              
             </div>
             <div>
               {phone.price}
