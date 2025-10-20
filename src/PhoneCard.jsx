@@ -13,15 +13,17 @@ const PhoneCard = () => {
   return (
     <div className='flex flex-col justify-center items-center' >
         <Header/>        
-        <div className=' mt-40 w-[90%] ' >
+        <div className=' mt-36 w-[90%] flex flex-col gap-8 ' >
           <div className='flex gap-2'>
-            <Link to="/"  >Головна / </Link>
-            <Link to="/" ><h6>Смартфони /</h6></Link>
+            <Link className=' opacity-60' to="/"  >Головна / </Link>
+            <Link className=' opacity-60' to="/CatalogMain" ><h6>Смартфони /</h6></Link>
             <Link to="/" ><h6>Карточка товару</h6></Link>
+          </div>
+          <div>
+            <img src={backBlack} className='tran' alt="" />
+            <Link className='' to="/CatalogMain" ><h6>Смартфони </h6></Link>
 
           </div>
-
-
         </div>
         
     </div>
