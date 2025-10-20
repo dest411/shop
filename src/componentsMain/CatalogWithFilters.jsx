@@ -52,7 +52,7 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                         )}
                         <div className='heart'>
                           <img
-                            onClick={() => toggleHeart(phone.id)}
+                            onClick={(e) => { toggleHeart(phone.id); e.stopPropagation();}}
                             src={heart[phone.id] ? redHeart : heartt}
                             alt="heart"
                           />
@@ -61,9 +61,10 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                       {phone.inStock ? (
                         inCart[phone.id] ? (
                           <button
-                            onClick={() => {
+                            onClick={(e) => {
                               handleClick(phone.id);
                               removeFromCart(phone.id);
+                              e.stopPropagation();
                             }}
                             className='buttonremove'
                           >
@@ -71,9 +72,10 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                           </button>
                         ) : (
                           <button
-                            onClick={() => {
+                            onClick={(e) => {
                               addBasket(phone.id);
                               handleClick(phone.id);
+                              e.stopPropagation();
                             }}
                             className='button'
                           >
