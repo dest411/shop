@@ -19,9 +19,11 @@ const PhoneCard = () => {
             <Link className=' opacity-60' to="/CatalogMain" ><h6>Смартфони /</h6></Link>
             <Link to="/" ><h6>Карточка товару</h6></Link>
           </div>
-          <div>
-            <img src={backBlack} className='tran' alt="" />
-            <Link className='' to="/CatalogMain" ><h6>Смартфони </h6></Link>
+          <div className=''>
+            <Link className='text-3xl flex gap-5' to="/CatalogMain" >
+              <img src={backBlack} className=' scale-125 transform -rotate-180 -' alt="" />
+              <h6>Смартфони </h6>
+            </Link>
 
           </div>
         </div>

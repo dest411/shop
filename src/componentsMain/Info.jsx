@@ -25,7 +25,7 @@ const Info = ({setSortType, viewfilter, setViewFilter }) => {
         <div className='titleInfo' >
             <Link to="/" style={{ textDecoration: 'none', color: 'black', display:'flex', gap:"15px", alignItems: 'center' }} >
                 <img src={backBlack} alt="" />
-                <h6>Смартфони</h6>
+                <h6>Головна</h6>
             </Link>
         </div>
         <div className='filter' >
