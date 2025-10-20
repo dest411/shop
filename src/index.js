@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     element: <CatalogMain />,
   },
   {
-    path: "/PhoneCard",
+    path: "/PhoneCard/:id",
     element: <PhoneCard />,
   },
 ]);

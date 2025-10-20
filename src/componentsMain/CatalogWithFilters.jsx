@@ -2,15 +2,18 @@ import React from 'react'
 import '../css/Discounts.css'
 import heartt from '../png/Vector.svg';
 import redHeart from  '../png/redHeart.svg';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 
+
 const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, toggleHeart, heart, phones, viewfilter }) => {
+
   const navigate = useNavigate();
-  const handleCardClick = (id) => {
-    navigate(`/PhoneCard/${id}`);
-  };
+  const handleCartOpen = (id) => {
+    navigate(`/PhoneCard/${id}`)
+  }
+
   return (
     <div className='w-full h-auto '>
       <div className='w-full h-auto '>
@@ -27,8 +30,7 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                     <div 
                       key={phone.id} 
                       className='phone-card cursor-pointer'
-                      onClick={() => handleCardClick(phone.id)}
-                    >
+                      onClick={() => handleCartOpen(phone.id)}>
                       
                       
                       <div className='phone-image'>
