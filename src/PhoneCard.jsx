@@ -2,7 +2,6 @@ import React from 'react'
 import Header from './components/Header'
 import { useParams } from 'react-router-dom'
 import phones from './phones'
-import backBlack from './png/backblack.svg'
 import { Link } from 'react-router-dom'
 import PhoneCardNavigate from './componentsPhoneCar/PhoneCardNavigate'
 
@@ -33,7 +32,11 @@ const PhoneCard = () => {
               
             </div>
             <div className=' flex flex-col items-start py-4' >
-              <p className='text-2xl font-bold'>{phone.price}</p>
+              <div className='bg-[#E7E7ED] p-8 rounded-xl'>
+                <p className='text-2xl font-bold'>{phone.price}</p>
+                <button className='button'>В корзину</button>
+              </div>
+              
             </div>
           </div>
         </div>
