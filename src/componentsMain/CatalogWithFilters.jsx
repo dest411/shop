@@ -2,6 +2,12 @@ import React from 'react'
 import '../css/Discounts.css'
 import heartt from '../png/Vector.svg';
 import redHeart from  '../png/redHeart.svg';
+import { Link } from 'react-router-dom';
+
+const LinkToPhoneCard = (() => {
+    <Link to="/PhoneCard" >
+    </Link>
+})
 
 const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, toggleHeart, heart, phones, viewfilter }) => {
   return (
@@ -17,7 +23,13 @@ const CatalogWithFilters = ({ addBasket, handleClick, inCart, removeFromCart, to
                   </div>
                 ) : ( 
                   phones.map((phone) => (
-                    <div key={phone.id} className='phone-card'>
+                    <div 
+                      key={phone.id} 
+                      className='phone-card cursor-pointer'
+                      onClick={LinkToPhoneCard}
+                    >
+                      
+                      
                       <div className='phone-image'>
                         <img src={phone.image} alt="" />
                         <span className='discount'>{phone.discount}</span>

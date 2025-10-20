@@ -34,6 +34,7 @@ const Header = ({cartCount}) => {
                         )}
                         <img className='basket' src={basket} alt="" />
                         <h3>Кошик</h3>
+                        
                     </div>
                 </Link> 
                 
@@ -51,6 +52,8 @@ const Header = ({cartCount}) => {
     
     
   )
+
+  
 }
 
 export default Header

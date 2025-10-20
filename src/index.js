@@ -7,6 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import PhoneCard from './PhoneCard';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/CatalogMain",
     element: <CatalogMain />,
+  },
+  {
+    path: "/PhoneCard",
+    element: <PhoneCard />,
   },
 ]);
 
