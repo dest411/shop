@@ -16,6 +16,17 @@ const PhoneCard = () => {
         <Header/>        
         <div className=' mt-36 w-[90%] flex flex-col gap-8 ' >
           <PhoneCardNavigate/>
+          <div className='flex justify-between w-full h-auto' >
+            <img className='w-[410px] h-[580px]' src={phone.image} alt="" />
+            <div className='bg-red-300'  >
+              {/* info */}
+              {phone.title}
+              {phone.color}
+            </div>
+            <div>
+              {phone.price}
+            </div>
+          </div>
         </div>
         
     </div>

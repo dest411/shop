@@ -19,7 +19,8 @@ const phones = [
     ram: "6GB",
     memory: "128GB",
     cores: 6,
-    sales: 100000
+    sales: 100000,
+    color:"white"
   },
   {
     id: 2,
