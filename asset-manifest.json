@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shop/static/css/main.f9361b83.css",
-    "main.js": "/shop/static/js/main.c3ab4961.js",
+    "main.js": "/shop/static/js/main.6eb43b6c.js",
     "static/media/samsung_galaxy_s23_ultra.png": "/shop/static/media/samsung_galaxy_s23_ultra.3e08971850d52ab66265.png",
     "static/media/column.png": "/shop/static/media/column.94c1b56e474630af9acb.png",
     "static/media/huawei_nova_y61.png": "/shop/static/media/huawei_nova_y61.98801ff51fc9adb4c414.png",
@@ -30,10 +30,10 @@
     "static/media/back.svg": "/shop/static/media/back.3769dc0b72999f04b3306ed2dea5da79.svg",
     "static/media/backblack.svg": "/shop/static/media/backblack.1b41167fbdb15160e1a5e646b3d7f0f6.svg",
     "main.f9361b83.css.map": "/shop/static/css/main.f9361b83.css.map",
-    "main.c3ab4961.js.map": "/shop/static/js/main.c3ab4961.js.map"
+    "main.6eb43b6c.js.map": "/shop/static/js/main.6eb43b6c.js.map"
   },
   "entrypoints": [
     "static/css/main.f9361b83.css",
-    "static/js/main.c3ab4961.js"
+    "static/js/main.6eb43b6c.js"
   ]
 }
