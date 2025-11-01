@@ -4,12 +4,12 @@ import App from './App';
 import CatalogMain from './CatalogMain';
 import "./App.css"
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import PhoneCard from './PhoneCard';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
@@ -23,6 +23,7 @@ const router = createBrowserRouter([
     element: <PhoneCard />,
   },
 ]);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
