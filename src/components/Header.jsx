@@ -47,6 +47,7 @@ const Header = ({cartCount}) => {
                 
             </div>
         </div>
+        
         <hr className='vertical-hr'  />
     </div>
     
