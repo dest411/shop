@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f9361b83.css",
+    "main.js": "/static/js/main.95b6123b.js",
+    "static/media/samsung_galaxy_s23_ultra.png": "/static/media/samsung_galaxy_s23_ultra.3e08971850d52ab66265.png",
+    "static/media/column.png": "/static/media/column.94c1b56e474630af9acb.png",
+    "static/media/huawei_nova_y61.png": "/static/media/huawei_nova_y61.98801ff51fc9adb4c414.png",
+    "static/media/image 4.png": "/static/media/image 4.4f15b972b4e45b426602.png",
+    "static/media/xiaomi_redmi_128gb.png": "/static/media/xiaomi_redmi_128gb.8286a6f679f47c6960a1.png",
+    "static/media/iphone_12_64gb.png": "/static/media/iphone_12_64gb.ca92acf2dca10a7e735b.png",
+    "static/media/iphone_14_128gb.png": "/static/media/iphone_14_128gb.0bd36050c183041c6ffe.png",
+    "static/media/iphone_14_pro_128gb.png": "/static/media/iphone_14_pro_128gb.0718889e466278dc5df6.png",
+    "static/media/image 3.png": "/static/media/image 3.572a87d47e4a39c0bb09.png",
+    "static/media/image 2.png": "/static/media/image 2.1a8211823e6295ddd443.png",
+    "static/media/google_pixel_7pro.png": "/static/media/google_pixel_7pro.ea722ccc66cdbf87abb9.png",
+    "static/media/image 5.png": "/static/media/image 5.4309c151cd0ee7989752.png",
+    "static/media/image 6.png": "/static/media/image 6.07851016e074a16f1f0b.png",
+    "static/media/image 1.png": "/static/media/image 1.e74a43c49c6ea593c14f.png",
+    "static/media/icon basket.svg": "/static/media/icon basket.e61e2ff66dbe7f2c8bdfd2e985f51f1d.svg",
+    "static/media/redHeart.svg": "/static/media/redHeart.6ba84fe932ec3773495fa2464121bcaa.svg",
+    "static/media/Vector.svg": "/static/media/Vector.3a9857c18018be261f62c2a520f2af9e.svg",
+    "index.html": "/index.html",
+    "static/media/icon profile.svg": "/static/media/icon profile.bcfe2da4b0c16d217e74e0d28979a0aa.svg",
+    "static/media/icon search.svg": "/static/media/icon search.228baaefd2a32577468d1b2c4cc3d6c5.svg",
+    "static/media/icon catalog.svg": "/static/media/icon catalog.fa37d122d3b7eabe8e4a985a8792b676.svg",
+    "static/media/white3lines.svg": "/static/media/white3lines.ae141361e41aa934a8b98548ba01d3b1.svg",
+    "static/media/black3lines.svg": "/static/media/black3lines.564ba92520073fcfd7fe2aa3c33300fc.svg",
+    "static/media/black4square.svg": "/static/media/black4square.dfcec3afc87dac1ca265fda102cabfb0.svg",
+    "static/media/white4square.svg": "/static/media/white4square.511688e3041b79ac79cc4861e22ba68e.svg",
+    "static/media/back.svg": "/static/media/back.3769dc0b72999f04b3306ed2dea5da79.svg",
+    "static/media/backblack.svg": "/static/media/backblack.1b41167fbdb15160e1a5e646b3d7f0f6.svg",
+    "main.f9361b83.css.map": "/static/css/main.f9361b83.css.map",
+    "main.95b6123b.js.map": "/static/js/main.95b6123b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f9361b83.css",
+    "static/js/main.95b6123b.js"
+  ]
+}
